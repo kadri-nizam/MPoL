@@ -669,10 +669,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fa6d66c3ee0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f089c14b4c0&gt;
 </pre></div>
 </div>
-<img alt="../_images/861f54db731f61ad91eaf36806482999dce5ca72c578d50070ac6724bda8f0cc.png" src="../_images/861f54db731f61ad91eaf36806482999dce5ca72c578d50070ac6724bda8f0cc.png" />
+<img alt="../_images/9d3b6621118d99039280fa01c0abaa6d67a99794ae82adaa59298c3ec88e0fda.png" src="../_images/9d3b6621118d99039280fa01c0abaa6d67a99794ae82adaa59298c3ec88e0fda.png" />
 </div>
 </div>
 <p>A blank image is not that exciting, but hopefully this demonstrates the state of the parameters at the start of optimization.</p>
@@ -700,10 +700,10 @@ title="Print to PDF"
          [ 7.1800e-03+2.8196e-05j,  4.4902e-06+3.5266e-08j,
           -4.4899e-06-5.2898e-08j,  ...,
            4.4899e-06-3.5264e-08j, -4.4902e-06+1.7633e-08j,
-           4.4903e-06-3.8083e-22j],
+           4.4903e-06+4.9217e-19j],
          [-7.1797e-03-5.6390e-05j, -4.4899e-06-5.2898e-08j,
            4.4895e-06+7.0527e-08j,  ...,
-          -4.4899e-06+1.7632e-08j,  4.4901e-06+1.1980e-21j,
+          -4.4899e-06+1.7632e-08j,  4.4901e-06-6.4302e-19j,
           -4.4902e-06-1.7633e-08j],
          ...,
          [ 7.1791e-03-8.4581e-05j,  4.4899e-06-3.5264e-08j,
@@ -711,10 +711,10 @@ title="Print to PDF"
            4.4885e-06-1.0578e-07j, -4.4891e-06+8.8154e-08j,
            4.4895e-06-7.0526e-08j],
          [-7.1797e-03+5.6390e-05j, -4.4902e-06+1.7633e-08j,
-           4.4901e-06-1.6480e-21j,  ...,
+           4.4901e-06+6.4011e-19j,  ...,
           -4.4891e-06+8.8154e-08j,  4.4895e-06-7.0527e-08j,
           -4.4899e-06+5.2898e-08j],
-         [ 7.1800e-03-2.8196e-05j,  4.4903e-06-1.4745e-21j,
+         [ 7.1800e-03-2.8196e-05j,  4.4903e-06-4.9292e-19j,
           -4.4902e-06-1.7633e-08j,  ...,
            4.4895e-06-7.0526e-08j, -4.4899e-06+5.2898e-08j,
            4.4902e-06-3.5266e-08j]]], dtype=torch.complex128,
@@ -766,10 +766,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fa6d49f9b80&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f08941fccd0&gt;
 </pre></div>
 </div>
-<img alt="../_images/628bf27fcb379f189dceaba6569beeeeb474e836c25ac6b7c17a072acd8648fa.png" src="../_images/628bf27fcb379f189dceaba6569beeeeb474e836c25ac6b7c17a072acd8648fa.png" />
+<img alt="../_images/0829225d113470ecd417b388bd2ca8c9b17e12b907ccd6ab783f87fc98a2116c.png" src="../_images/0829225d113470ecd417b388bd2ca8c9b17e12b907ccd6ab783f87fc98a2116c.png" />
 </div>
 </div>
 <p>The gradient image points in the direction of lower loss values. So the final step is to add the gradient image to the base image in order to advance base parameters in the direction of the minimum loss value. This process is called gradient descent, and can be extremely useful for optimizing large dimensional parameter spaces (like images). The optimizer carries out the addition of the gradient</p>
@@ -801,33 +801,7 @@ title="Print to PDF"
               tensor([[[[0.0625, 0.1250, 0.0625],
                         [0.1250, 0.2500, 0.1250],
                         [0.0625, 0.1250, 0.0625]]]], dtype=torch.float64)),
-             (&#39;conv_layer.m.bias&#39;, tensor([0.], dtype=torch.float64)),
-             (&#39;fcube.vis&#39;,
-              tensor([[[ 1.1481e+01+0.0000e+00j,  7.1800e-03+2.8196e-05j,
-                        -7.1797e-03-5.6390e-05j,  ...,
-                         7.1791e-03-8.4581e-05j, -7.1797e-03+5.6390e-05j,
-                         7.1800e-03-2.8196e-05j],
-                       [ 7.1800e-03+2.8196e-05j,  4.4902e-06+3.5266e-08j,
-                        -4.4899e-06-5.2898e-08j,  ...,
-                         4.4899e-06-3.5264e-08j, -4.4902e-06+1.7633e-08j,
-                         4.4903e-06-3.8083e-22j],
-                       [-7.1797e-03-5.6390e-05j, -4.4899e-06-5.2898e-08j,
-                         4.4895e-06+7.0527e-08j,  ...,
-                        -4.4899e-06+1.7632e-08j,  4.4901e-06+1.1980e-21j,
-                        -4.4902e-06-1.7633e-08j],
-                       ...,
-                       [ 7.1791e-03-8.4581e-05j,  4.4899e-06-3.5264e-08j,
-                        -4.4899e-06+1.7632e-08j,  ...,
-                         4.4885e-06-1.0578e-07j, -4.4891e-06+8.8154e-08j,
-                         4.4895e-06-7.0526e-08j],
-                       [-7.1797e-03+5.6390e-05j, -4.4902e-06+1.7633e-08j,
-                         4.4901e-06-1.6480e-21j,  ...,
-                        -4.4891e-06+8.8154e-08j,  4.4895e-06-7.0527e-08j,
-                        -4.4899e-06+5.2898e-08j],
-                       [ 7.1800e-03-2.8196e-05j,  4.4903e-06-1.4745e-21j,
-                        -4.4902e-06-1.7633e-08j,  ...,
-                         4.4895e-06-7.0526e-08j, -4.4899e-06+5.2898e-08j,
-                         4.4902e-06-3.5266e-08j]]], dtype=torch.complex128))])
+             (&#39;conv_layer.m.bias&#39;, tensor([0.], dtype=torch.float64))])
 </pre></div>
 </div>
 </div>
@@ -849,10 +823,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fa6d4891070&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f08940f9070&gt;
 </pre></div>
 </div>
-<img alt="../_images/e4632e540366f8a91256a0fa332b63e619f2dafc7a6c3deda6166e5579516d44.png" src="../_images/e4632e540366f8a91256a0fa332b63e619f2dafc7a6c3deda6166e5579516d44.png" />
+<img alt="../_images/9f1abb602d2e3725f5258c187e2070d99ab706916d97c07ddddf421593164aba.png" src="../_images/9f1abb602d2e3725f5258c187e2070d99ab706916d97c07ddddf421593164aba.png" />
 </div>
 </div>
 </section>
@@ -886,8 +860,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 35.5 s, sys: 8.61 s, total: 44.1 s
-Wall time: 26.8 s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 33.5 s, sys: 8.45 s, total: 41.9 s
+Wall time: 25.7 s
 </pre></div>
 </div>
 </div>
@@ -905,7 +879,7 @@ Wall time: 26.8 s
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;loss&#39;)
 </pre></div>
 </div>
-<img alt="../_images/b267f36a40ee3ebad4d3e8ce5cc07944476dbcd8c9babfd1d8f41f8f9a8f4a25.png" src="../_images/b267f36a40ee3ebad4d3e8ce5cc07944476dbcd8c9babfd1d8f41f8f9a8f4a25.png" />
+<img alt="../_images/2ff2c9b56a196d1ecdf83919de18b519d73d704626fcae539dae379e0308480d.png" src="../_images/2ff2c9b56a196d1ecdf83919de18b519d73d704626fcae539dae379e0308480d.png" />
 </div>
 </div>
 <p>and we see that we’ve reasonably converged to a set of parameters without much further improvement in the loss value.</p>
@@ -931,10 +905,10 @@ Wall time: 26.8 s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fa6d4755a90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f088d5273a0&gt;
 </pre></div>
 </div>
-<img alt="../_images/9b4ad0e1f387523f0d7a60848c332837d46aa36991da61a6c59b9ac82a280bf5.png" src="../_images/9b4ad0e1f387523f0d7a60848c332837d46aa36991da61a6c59b9ac82a280bf5.png" />
+<img alt="../_images/8cd79b998f8f6f24e37b1953ef06c99ff0e9e8516d5d623fe74bba775445a14a.png" src="../_images/8cd79b998f8f6f24e37b1953ef06c99ff0e9e8516d5d623fe74bba775445a14a.png" />
 </div>
 </div>
 </section>
