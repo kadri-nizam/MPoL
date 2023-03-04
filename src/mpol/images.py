@@ -2,6 +2,8 @@ r"""The ``images`` module provides the core functionality of MPoL via :class:`mp
 
 from __future__ import annotations
 
+from typing import Callable
+
 import numpy as np
 import torch
 import torch.fft  # to avoid conflicts with old torch.fft *function*
@@ -32,10 +34,10 @@ class BaseCube(nn.Module):
 
     def __init__(
         self,
-        coords=None,
-        nchan=1,
-        pixel_mapping=None,
-        base_cube=None,
+        coords: GridCoords,
+        nchan: int = 1,
+        pixel_mapping: Callable[[torch.Tensor], torch.Tensor] | None = None,
+        base_cube: torch.Tensor | None = None,
     ):
         super().__init__()
 
@@ -74,7 +76,7 @@ class BaseCube(nn.Module):
         coords = GridCoords(cell_size, npix)
         return cls(coords, nchan, pixel_mapping, base_cube)
 
-    def forward(self):
+    def forward(self) -> torch.Tensor:
         r"""
         Calculate the image representation from the ``base_cube`` using the pixel mapping
 
