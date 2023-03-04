@@ -46,24 +46,21 @@ class BaseCube(nn.Module):
         self.coords = coords
         self.nchan = nchan
 
-        # The ``base_cube`` is already packed to make the Fourier transformation easier
-        if base_cube is None:
-            self.base_cube = nn.Parameter(
-                torch.full(
-                    (self.nchan, self.coords.npix, self.coords.npix),
-                    fill_value=0.05,
-                    requires_grad=True,
-                    dtype=torch.double,
-                )
-            )
-
-        else:
-            # We expect the user to supply a pre-packed base cube
-            # so that it's ready to go for the FFT
-            # We could apply this transformation for the user, but I think it will
-            # lead to less confusion if we make this transformation explicit
-            # for the user during the setup phase.
-            self.base_cube = nn.Parameter(base_cube, requires_grad=True)
+        # We expect the user to supply a pre-packed base cube
+        # so that it's ready to go for the FFT
+        # We could apply this transformation for the user, but I think it will
+        # lead to less confusion if we make this transformation explicit
+        # for the user during the setup phase.
+        self.base_cube = nn.Parameter(
+            base_cube
+            if base_cube is not None
+            else torch.full(
+                (self.nchan, self.coords.npix, self.coords.npix),
+                fill_value=0.05,
+                dtype=torch.double,
+            ),
+            requires_grad=True,
+        )
 
         if not isinstance(pixel_mapping, nn.Softplus):
             test_tensor = torch.tensor([-1.0], requires_grad=True)
