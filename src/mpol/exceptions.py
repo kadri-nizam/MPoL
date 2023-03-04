@@ -5,6 +5,10 @@ class CellSizeError(Exception):
     ...
 
 
+class TorchIncompatibleFunctionError(Exception):
+    ...
+
+
 class WrongDimensionError(Exception):
     ...
 

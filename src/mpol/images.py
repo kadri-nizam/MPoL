@@ -9,6 +9,8 @@ import torch
 import torch.fft  # to avoid conflicts with old torch.fft *function*
 from torch import nn
 
+from mpol.exceptions import TorchIncompatibleFunctionError
+
 from . import utils
 from .coordinates import GridCoords
 
@@ -36,7 +38,7 @@ class BaseCube(nn.Module):
         self,
         coords: GridCoords,
         nchan: int = 1,
-        pixel_mapping: Callable[[torch.Tensor], torch.Tensor] | None = None,
+        pixel_mapping: Callable[[torch.Tensor], torch.Tensor] = nn.Softplus(),
         base_cube: torch.Tensor | None = None,
     ):
         super().__init__()
@@ -63,11 +65,18 @@ class BaseCube(nn.Module):
             # for the user during the setup phase.
             self.base_cube = nn.Parameter(base_cube, requires_grad=True)
 
-        if pixel_mapping is None:
-            self.pixel_mapping = torch.nn.Softplus()
-        else:
-            # TODO assert that this is a PyTorch function
-            self.pixel_mapping = pixel_mapping
+        if not isinstance(pixel_mapping, nn.Softplus):
+            test_tensor = torch.tensor([-1.0], requires_grad=True)
+            if not pixel_mapping(test_tensor).requires_grad:
+                raise TorchIncompatibleFunctionError(
+                    "The provided pixel_mapping function results in a tensor with "
+                    "a broken computation graph and backpropagation is not possible. "
+                    "Please ensure operators in the function are torch functions."
+                )
+
+            del test_tensor
+
+        self.pixel_mapping = pixel_mapping
 
     @classmethod
     def from_image_properties(
