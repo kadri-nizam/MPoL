@@ -40,7 +40,7 @@ class BaseCube(nn.Module):
         nchan: int = 1,
         pixel_mapping: Callable[[torch.Tensor], torch.Tensor] = nn.Softplus(),
         base_cube: torch.Tensor | None = None,
-    ):
+    ) -> None:
         super().__init__()
 
         self.coords = coords
@@ -77,7 +77,12 @@ class BaseCube(nn.Module):
 
     @classmethod
     def from_image_properties(
-        cls, cell_size, npix, nchan=1, pixel_mapping=None, base_cube=None
+        cls,
+        cell_size: float,
+        npix: int,
+        nchan: int = 1,
+        pixel_mapping: Callable[[torch.Tensor], torch.Tensor] = nn.Softplus(),
+        base_cube: torch.Tensor | None = None,
     ) -> BaseCube:
         coords = GridCoords(cell_size, npix)
         return cls(coords, nchan, pixel_mapping, base_cube)
@@ -117,7 +122,7 @@ class HannConvCube(nn.Module):
         requires_grad (bool): keep kernel fixed
     """
 
-    def __init__(self, nchan, requires_grad=False):
+    def __init__(self, nchan: int, requires_grad: bool = False) -> None:
         super().__init__()
         # simple convolutional filter operates on per-channel basis
         # 3x3 Hann filter
@@ -149,7 +154,7 @@ class HannConvCube(nn.Module):
             torch.zeros(nchan, dtype=torch.double), requires_grad=requires_grad
         )
 
-    def forward(self, cube):
+    def forward(self, cube: torch.Tensor) -> torch.Tensor:
         r"""Args:
             cube (torch.double tensor, of shape ``(nchan, npix, npix)``): a prepacked image cube, for example, from ImageCube.forward()
 
