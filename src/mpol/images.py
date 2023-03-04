@@ -187,8 +187,6 @@ class ImageCube(nn.Module):
     All keyword arguments are required unless noted. The passthrough argument is essential for specifying whether the ImageCube object is the set of root parameters (``passthrough==False``) or if its simply a passthrough layer (``pasthrough==True``). In either case, ImageCube is essentially an identity layer, since no transformations are applied to the ``cube`` tensor. The main purpose of the ImageCube layer is to provide useful functionality around the ``cube`` tensor, such as returning a sky_cube representation and providing FITS writing functionility. In the case of ``passthrough==False``, the ImageCube layer also acts as a container for the trainable parameters.
 
     Args:
-        cell_size (float): the width of a pixel [arcseconds]
-        npix (int): the number of pixels per image side
         coords (GridCoords): an object already instantiated from the GridCoords class. If providing this, cannot provide ``cell_size`` or ``npix``.
         nchan (int): the number of channels in the image
         passthrough (bool): if passthrough, assume ImageCube is just a layer as opposed to parameter base.
@@ -197,10 +195,10 @@ class ImageCube(nn.Module):
 
     def __init__(
         self,
-        coords=None,
-        nchan=1,
-        passthrough=False,
-        cube=None,
+        coords: GridCoords,
+        nchan: int = 1,
+        passthrough: bool = False,
+        cube: torch.Tensor | None = None,
     ):
         super().__init__()
 
@@ -235,12 +233,27 @@ class ImageCube(nn.Module):
 
     @classmethod
     def from_image_properties(
-        cls, cell_size, npix, nchan=1, passthrough=False, cube=None
+        cls,
+        cell_size: float,
+        npix: int,
+        nchan: int = 1,
+        passthrough: bool = False,
+        cube: torch.Tensor | None = None,
     ) -> ImageCube:
+        """Alternative method for instantiating an ImageCube given ``cell_size``
+        and ``npix``.
+
+        Args:
+            cell_size (float): the width of a pixel [arcseconds]
+            npix (int): the number of pixels per image side
+            nchan (int): the number of channels in the image
+            passthrough (bool): if passthrough, assume ImageCube is just a layer as opposed to parameter base.
+            cube (torch.double tensor, of shape ``(nchan, npix, npix)``): (optional) a prepacked image cube to initialize the model with in units of [:math:`\mathrm{Jy}\,\mathrm{arcsec}^{-2}`]. If None, assumes starting ``cube`` is ``torch.zeros``. See :ref:`cube-orientation-label` for more information on the expectations of the orientation of the input image.
+        """
         coords = GridCoords(cell_size, npix)
         return cls(coords, nchan, passthrough, cube)
 
-    def forward(self, cube=None):
+    def forward(self, cube: torch.Tensor | None = None) -> torch.Tensor:
         r"""
         If the ImageCube object was initialized with ``passthrough=True``, the ``cube`` argument is required. ``forward`` essentially just passes this on as an identity operation.
 
@@ -264,7 +277,7 @@ class ImageCube(nn.Module):
         return self.cube
 
     @property
-    def sky_cube(self):
+    def sky_cube(self) -> torch.Tensor:
         """
         The image cube arranged as it would appear on the sky.
 
@@ -274,7 +287,12 @@ class ImageCube(nn.Module):
         """
         return utils.packed_cube_to_sky_cube(self.cube)
 
-    def to_FITS(self, fname="cube.fits", overwrite=False, header_kwargs=None):
+    def to_FITS(
+        self,
+        fname: str = "cube.fits",
+        overwrite: bool = False,
+        header_kwargs: dict[str, str] | None = None,
+    ) -> None:
         """
         Export the image cube to a FITS file.
 
