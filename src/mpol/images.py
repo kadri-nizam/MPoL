@@ -309,7 +309,7 @@ class ImageCube(nn.Module):
             from astropy import wcs
             from astropy.io import fits
         except ImportError:
-            print(
+            raise ImportError(
                 "Please install the astropy package to use FITS export functionality."
             )
 
