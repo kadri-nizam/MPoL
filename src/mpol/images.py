@@ -63,7 +63,7 @@ class BaseCube(nn.Module):
         )
 
         if not isinstance(pixel_mapping, nn.Softplus):
-            test_tensor = torch.tensor([-1.0], requires_grad=True)
+            test_tensor = torch.tensor(np.random.randn(4, 3, 3), requires_grad=True)
             if not pixel_mapping(test_tensor).requires_grad:
                 raise TorchIncompatibleFunctionError(
                     "The provided pixel_mapping function results in a tensor with "
