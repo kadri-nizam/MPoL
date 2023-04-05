@@ -37,9 +37,9 @@ def main():
     # choose the strategy we want to use match the visibility
     # with polymorphism, we can simply choose a different strategy and the library
     # will call the correct method
-    # strategy = DataAverager(coords, data, weighting="briggs", robust=0.5)
+    # strategy = DataAverager(coords, data)
     # strategy = NuFFT(coords, data, sparse_matrices=True)
-    strategy = DirtyImager(coords, data)
+    strategy = DirtyImager(coords, data, weighting="briggs", robust=0.5)
 
     # include any regularizers
     image_regularizer = ModelRegularizer(Entropy(1e-4, 1e-4), Sparsity(1e-4), TSV(1e-4))

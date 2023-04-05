@@ -75,5 +75,5 @@ class ModelImage(nn.Module):
         return self.image_cube.sky_cube
 
     @property
-    def visibilitie(self):
+    def visibilities(self):
         return self.fourier_cube.vis
