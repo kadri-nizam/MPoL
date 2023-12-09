@@ -18,11 +18,22 @@ class ModelRegularizer(nn.Module):
         if reduction.lower() not in _MERGE_DICT:
             raise ValueError(f"Reduction method '{reduction}' not available.")
 
+        regularizers = regularizers or (nn.Identity(),)
         self.regularizers = nn.ModuleList(regularizers)
         self.reduction = reduction
 
     def __repr__(self):
-        return f"Regularizer {self.regularizers}"
+        modules = "\n".join(
+            f"  ({idx}): {module}" for idx, module in enumerate(self.regularizers)
+        )
+
+        # fmt: off
+        return (
+            f"ModelRegularizer(reduction={self.reduction}\n"
+            f"{modules}\n"
+            ")"
+        )
+        # fmt: on
 
     def __getitem__(self, index: int):
         return self.regularizers[index]

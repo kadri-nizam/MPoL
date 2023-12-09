@@ -1,4 +1,5 @@
 from __future__ import annotations
+from typing import Callable
 
 import torch
 from torch import nn
@@ -12,7 +13,7 @@ class ImageCube(nn.Module):
     def __init__(
         self,
         starting_cube: torch.Tensor,
-        pixel_map=torch.log10,
+        pixel_map: Callable[[torch.Tensor], torch.Tensor] = nn.Softplus(),
     ) -> None:
         super().__init__()
 
@@ -21,7 +22,12 @@ class ImageCube(nn.Module):
         self.pixel_map = pixel_map
 
     @classmethod
-    def default_cube(cls, coords: GridCoords, nchan: int = 1, pixel_map=torch.exp):
+    def default_cube(
+        cls,
+        coords: GridCoords,
+        nchan: int = 1,
+        pixel_map: Callable[[torch.Tensor], torch.Tensor] = nn.Softplus(),
+    ):
         starting_cube = torch.full((nchan, coords.npix, coords.npix), 0.5)
         return cls(starting_cube, pixel_map)
 
@@ -30,7 +36,7 @@ class ImageCube(nn.Module):
 
     @property
     def sky_cube(self):
-        return packed_cube_to_sky_cube(self()).detach()
+        return packed_cube_to_sky_cube(self().detach())
 
     @property
     def shape(self):

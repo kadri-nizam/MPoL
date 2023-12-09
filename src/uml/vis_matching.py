@@ -1,11 +1,22 @@
 from __future__ import annotations
+from typing import Protocol
 
 from mpol.coordinates import GridCoords
 import torch
 from torch import nn
-from abc import ABC, abstractmethod  # abstract base class
+from abc import ABC, abstractmethod
 
-from .data import VisibilityData
+from uml.data import VisibilityData  # abstract base class
+
+
+class ModelImage(Protocol):
+    @property
+    def image_cube(self):
+        ...
+
+    @property
+    def visibilities(self):
+        ...
 
 
 class FourierStrategy(nn.Module, ABC):
@@ -15,10 +26,13 @@ class FourierStrategy(nn.Module, ABC):
     # Any subclass that implements the interface can be easily swapped out as the
     # imaging strategy without any changes to the code
 
-    def __init__(self, coords: GridCoords = None, data: VisibilityData = None):  # type: ignore
+    def __init__(self, coords: GridCoords = None):  # type: ignore
         super().__init__()
         self.coords = coords
-        self.data = data
+
+    @abstractmethod
+    def _process_data_vis(self, data):
+        ...
 
     @abstractmethod
     def _match_index(self, cube):
@@ -33,51 +47,49 @@ class FourierStrategy(nn.Module, ABC):
 
 class GriddedStrategy(FourierStrategy):
     # Additional interface for gridded strategies as this requires a fourier cube
-    def __init__(self, coords: GridCoords, data: VisibilityData):
-        super().__init__(coords, data)
+    def __init__(self, coords: GridCoords):
+        super().__init__(coords)
 
-        # Subclasses will also have the additional following variables
-        # from _grid_data_vis whose specific implementation is defined in the
-        # subclass
-        (
-            self.vis_gridded,
-            self.weight_gridded,
-            self.mask,
-            self.vis_indexed,
-            self.weight_indexed,
-        ) = self._grid_data_vis()
+        self.vis_gridded: torch.Tensor | None = None
+        self.weight_gridded: torch.Tensor | None = None
+        self.mask: torch.Tensor | None = None
+        self.vis_indexed: torch.Tensor | None = None
+        self.weight_indexed: torch.Tensor | None = None
 
     @abstractmethod
-    def _match_index(self, model_vis):
-        ...
-
-    @abstractmethod
-    def _grid_data_vis(self) -> tuple[torch.Tensor, ...]:
+    def fit_observed_visibilities(self, data) -> tuple[torch.Tensor, ...]:
         # for gridded strategy, subclasses must also define how _grid_data_vis works
         # to populate vis_gridded, weight_gridded, mask, vis_indexed, weight_indexed
         # in addition to _match_index
         ...
 
-    def forward(self, _, model_vis):
+    @abstractmethod
+    def _match_index(self, visibilities):
+        ...
+
+    def forward(self, model: ModelImage):
+        # Subclasses will also have the additional following variables
+        # from _grid_data_vis whose specific implementation is defined in the
+        # subclass
         print(
             f"{self.__class__.__name__}: Discarding model_image and forward passing only model_vis..."
         )
-        return super().forward(model_vis)
+        return super().forward(model.visibilities)
 
 
 class DataAverager(GriddedStrategy):
     # The result is that the constructor requires only coords, data, and strategy-specific
     # parameters from user.
     # Everything else is abstracted away. Only implementation specific method are in each subclass
-    def __init__(self, coords: GridCoords = None, data: VisibilityData = None, **data_averager_params):  # type: ignore
-        super().__init__(coords, data)  # type: ignore
+    def __init__(self, coords: GridCoords = None, **data_averager_params):  # type: ignore
+        super().__init__(coords)  # type: ignore
         print("DataAverager constructor is constructing all gridded info from data_vis")
         # all other DataAverager params saved here
 
-    def _match_index(self, model_vis):
+    def _match_index(self, visibilities):
         print("Match indexing vis uu and vv from DataAveraged strategy...")
 
-    def _grid_data_vis(self) -> tuple[torch.Tensor, ...]:
+    def _process_data_vis(self) -> tuple[torch.Tensor, ...]:
         print("Making gridded data vis...")
         # Just returning None here to make it work
         vis_gridded = None
@@ -92,15 +104,15 @@ class DirtyImager(GriddedStrategy):
     # The result is that the constructor requires only coords, data, and strategy-specific
     # parameters from user.
     # Everything else is abstracted away. Only implementation specific method are in each subclass
-    def __init__(self, coords: GridCoords = None, data: VisibilityData = None, **dirty_imager_params):  # type: ignore
-        super().__init__(coords, data)  # type: ignore
+    def __init__(self, coords: GridCoords = None, **dirty_imager_params):  # type: ignore
+        super().__init__(coords)  # type: ignore
         print("DirtyImager constructor is constructing all gridded info from data_vis")
         # all other DirtyImager params saved here
 
-    def _match_index(self, model_vis):
+    def _match_index(self, visibilities):
         print("Match indexing vis uu and vv from DirtyImager strategy...")
 
-    def _grid_data_vis(self) -> tuple[torch.Tensor, ...]:
+    def _process_data_vis(self) -> tuple[torch.Tensor, ...]:
         print("Making gridded data vis...")
         # Just returning None here to make it work
         vis_gridded = None
@@ -115,14 +127,14 @@ class NuFFT(FourierStrategy):
     # The result is that the constructor requires only coords, data, and strategy-specific
     # parameters from user.
     # Everything else is abstracted away. Only implementation specific method are in each subclass
-    def __init__(self, coords: GridCoords, data: VisibilityData, **nufft_params):
-        super().__init__(coords, data)
+    def __init__(self, coords: GridCoords, **nufft_params):
+        super().__init__(coords)
         print("NuFFT constructor is constructing NuFFT object")
         # make nufft object
 
-    def _match_index(self, model_image):
+    def _match_index(self, image_cube):
         print("Match indexing  vis uu and vv from NuFFT strategy...")
 
-    def forward(self, model_image, _):
+    def forward(self, model: ModelImage):
         print("NuFFT: Discarding model_vis and forward passing only model_image...")
-        return super().forward(model_image)
+        return super().forward(model.image_cube)
