@@ -1,307 +1,309 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mpol.plot &#8212; MPoL 0.1.13 documentation</title>
-    
+    <title>mpol.plot &#8212; MPoL 0.2.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="https://buttons.github.io/buttons.js"></script>
-    <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/mpol/plot';</script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">MPoL 0.1.13 documentation</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  User Guide
- </span>
-</p>
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="MPoL 0.2.0 documentation - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="MPoL 0.2.0 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../rml_intro.html">
-   Introduction to Regularized Maximum Likelihood Imaging
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../installation.html">
-   MPoL Installation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../units-and-conventions.html">
-   Units and Conventions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../developer-documentation.html">
-   Developer Documentation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../api.html">
-   API
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../rml_intro.html">Introduction to Regularized Maximum Likelihood Imaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">MPoL Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../units-and-conventions.html">Units and Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-documentation.html">Developer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Tutorials
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/PyTorch.html">
-   Introduction to PyTorch: Tensors and Gradient Descent
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/gridder.html">
-   Gridding and diagnostic images
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/optimization.html">
-   Intro to RML with MPoL
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/loose-visibilities.html">
-   Likelihood functions and model visibilities
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/crossvalidation.html">
-   Cross validation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/gpu_setup.html">
-   GPU Acceleration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/initializedirtyimage.html">
-   Initializing with the Dirty Image
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../large-tutorials/HD143006_part_1.html">
-   HD143006 Tutorial Part 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../large-tutorials/HD143006_part_2.html">
-   HD143006 Tutorial Part 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/fakedata.html">
-   Making a Mock Dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../large-tutorials/pyro.html">
-   Parametric Inference with Pyro
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/PyTorch.html">Introduction to PyTorch: Tensors and Gradient Descent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/gridder.html">Gridding and diagnostic images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/optimization.html">Intro to RML with MPoL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/loose-visibilities.html">Likelihood functions and model visibilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/crossvalidation.html">Cross validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/gpu_setup.html">GPU Acceleration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/initializedirtyimage.html">Initializing with the Dirty Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large-tutorials/HD143006_part_1.html">HD143006 Tutorial Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large-tutorials/HD143006_part_2.html">HD143006 Tutorial Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/fakedata.html">Making a Mock Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large-tutorials/pyro.html">Parametric Inference with Pyro</a></li>
 </ul>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../changelog.html">
-   Changelog
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/MPoL-dev/MPoL" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-<a href="https://github.com/MPoL-dev/MPoL"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
 
 </a>
 
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                    </div>
-                </div>
-            </div>
-            <main id="main-content" role="main">
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <h1>Source code for mpol.plot</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">mco</span> 
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Ellipse</span>
+<span class="kn">import</span> <span class="nn">torch</span>
 
 <span class="kn">from</span> <span class="nn">astropy.visualization.mpl_normalize</span> <span class="kn">import</span> <span class="n">simple_norm</span>
 
+<span class="kn">from</span> <span class="nn">mpol.fourier</span> <span class="kn">import</span> <span class="n">get_vis_residuals</span>
+<span class="kn">from</span> <span class="nn">mpol.gridding</span> <span class="kn">import</span> <span class="n">DirtyImager</span>
+<span class="kn">from</span> <span class="nn">mpol.onedim</span> <span class="kn">import</span> <span class="n">radialI</span><span class="p">,</span> <span class="n">radialV</span>
 <span class="kn">from</span> <span class="nn">mpol.utils</span> <span class="kn">import</span> <span class="n">loglinspace</span><span class="p">,</span> <span class="n">torch2npy</span><span class="p">,</span> <span class="n">packed_cube_to_sky_cube</span>
+<span class="kn">from</span> <span class="nn">mpol.input_output</span> <span class="kn">import</span> <span class="n">ProcessFitsImage</span>
 
-<div class="viewcode-block" id="get_image_cmap_norm"><a class="viewcode-back" href="../../api.html#mpol.plot.get_image_cmap_norm">[docs]</a><span class="k">def</span> <span class="nf">get_image_cmap_norm</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">stretch</span><span class="o">=</span><span class="s1">&#39;power&#39;</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">asinh_a</span><span class="o">=</span><span class="mf">0.02</span><span class="p">):</span>
+<div class="viewcode-block" id="get_image_cmap_norm"><a class="viewcode-back" href="../../api.html#mpol.plot.get_image_cmap_norm">[docs]</a><span class="k">def</span> <span class="nf">get_image_cmap_norm</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">stretch</span><span class="o">=</span><span class="s1">&#39;power&#39;</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">asinh_a</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">symmetric</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get a colormap normalization to apply to an image. </span>
 
@@ -315,15 +317,22 @@ title="Source repository"
 <span class="sd">        gamma=1.0 yields a linear colormap.</span>
 <span class="sd">    asinh_a : float, default = 0.02</span>
 <span class="sd">        Scale parameter for an asinh stretch.</span>
+<span class="sd">    symmetric : bool, default=False </span>
+<span class="sd">        Whether the colormap is symmetric about 0</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">vmax</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">symmetric</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">vmax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">min</span><span class="p">()),</span> <span class="n">image</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+        <span class="n">vmin</span> <span class="o">=</span> <span class="o">-</span><span class="n">vmax</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">vmax</span><span class="p">,</span> <span class="n">vmin</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">image</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">stretch</span> <span class="o">==</span> <span class="s1">&#39;power&#39;</span><span class="p">:</span>
+            <span class="n">vmin</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">if</span> <span class="n">stretch</span> <span class="o">==</span> <span class="s1">&#39;power&#39;</span><span class="p">:</span>
-        <span class="n">vmin</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">norm</span> <span class="o">=</span> <span class="n">mco</span><span class="o">.</span><span class="n">PowerNorm</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span> <span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span>    
     
     <span class="k">elif</span> <span class="n">stretch</span> <span class="o">==</span> <span class="s1">&#39;asinh&#39;</span><span class="p">:</span>
-        <span class="n">vmin</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
         <span class="n">norm</span> <span class="o">=</span> <span class="n">simple_norm</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">stretch</span><span class="o">=</span><span class="s1">&#39;asinh&#39;</span><span class="p">,</span> <span class="n">asinh_a</span><span class="o">=</span><span class="n">asinh_a</span><span class="p">,</span> 
                         <span class="n">min_cut</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span> <span class="n">max_cut</span><span class="o">=</span><span class="n">vmax</span><span class="p">)</span>
 
@@ -333,10 +342,64 @@ title="Source repository"
     <span class="k">return</span> <span class="n">norm</span></div>
 
 
+<div class="viewcode-block" id="get_residual_image"><a class="viewcode-back" href="../../api.html#mpol.plot.get_residual_image">[docs]</a><span class="k">def</span> <span class="nf">get_residual_image</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">robust</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Get a dirty image and colormap normalization for residual visibilities,</span>
+<span class="sd">    the difference of observed visibilities and an MPoL model sampled at the </span>
+<span class="sd">    observed (u,v) points.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    model : `torch.nn.Module` object</span>
+<span class="sd">        Instance of the `mpol.precomposed.SimpleNet` class. Contains model</span>
+<span class="sd">        visibilities.</span>
+<span class="sd">    u, v : array, unit=[k\lambda]</span>
+<span class="sd">        Data u- and v-coordinates</span>
+<span class="sd">    V : array, unit=[Jy]</span>
+<span class="sd">        Data visibility amplitudes</span>
+<span class="sd">    weights : array, unit=[Jy^-2]</span>
+<span class="sd">        Data weights</span>
+<span class="sd">    robust : float, default=0.5</span>
+<span class="sd">        Robust weighting parameter used to create the dirty image of the </span>
+<span class="sd">        residual visibilities</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    im_resid : 2D image array</span>
+<span class="sd">        The residual image</span>
+<span class="sd">    norm_resid : Matplotlib colormap normalization</span>
+<span class="sd">        Symmetric, linear colormap for `im_resid`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">vis_resid</span> <span class="o">=</span> <span class="n">get_vis_residuals</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+
+    <span class="n">resid_imager</span> <span class="o">=</span> <span class="n">DirtyImager</span><span class="p">(</span>
+        <span class="n">coords</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">coords</span><span class="p">,</span>
+        <span class="n">uu</span><span class="o">=</span><span class="n">u</span><span class="p">,</span>
+        <span class="n">vv</span><span class="o">=</span><span class="n">v</span><span class="p">,</span>
+        <span class="n">weight</span><span class="o">=</span><span class="n">weights</span><span class="p">,</span>
+        <span class="n">data_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">vis_resid</span><span class="p">),</span>
+        <span class="n">data_im</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">vis_resid</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">im_resid</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">resid_imager</span><span class="o">.</span><span class="n">get_dirty_image</span><span class="p">(</span><span class="n">weighting</span><span class="o">=</span><span class="s2">&quot;briggs&quot;</span><span class="p">,</span> 
+                                               <span class="n">robust</span><span class="o">=</span><span class="n">robust</span><span class="p">,</span> 
+                                               <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;Jy/arcsec^2&#39;</span>
+                                               <span class="p">)</span>
+    <span class="c1"># `get_vis_residuals` has already selected a single channel</span>
+    <span class="n">im_resid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">im_resid</span><span class="p">)</span>
+    
+    <span class="n">norm_resid</span> <span class="o">=</span> <span class="n">get_image_cmap_norm</span><span class="p">(</span><span class="n">im_resid</span><span class="p">,</span> 
+                                     <span class="n">stretch</span><span class="o">=</span><span class="s1">&#39;power&#39;</span><span class="p">,</span> 
+                                     <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+                                     <span class="n">symmetric</span><span class="o">=</span><span class="kc">True</span>
+                                     <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">im_resid</span><span class="p">,</span> <span class="n">norm_resid</span></div>
+
+
 <div class="viewcode-block" id="plot_image"><a class="viewcode-back" href="../../api.html#mpol.plot.plot_image">[docs]</a><span class="k">def</span> <span class="nf">plot_image</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">extent</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;inferno&quot;</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
-               <span class="n">clab</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Jy arcsec$^{-2}$&quot;</span><span class="p">,</span>
+               <span class="n">clab</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;I [Jy arcsec$^{-2}$]&quot;</span><span class="p">,</span>
                <span class="n">xlab</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\Delta \alpha \cos \delta$ [$</span><span class="si">{}</span><span class="s2">^{\prime\prime}$]&quot;</span><span class="p">,</span>
-               <span class="n">ylab</span><span class="o">=</span><span class="s2">&quot;$\Delta \delta$ [$</span><span class="si">{}</span><span class="s2">^{\prime\prime}$]&quot;</span><span class="p">,</span>
+               <span class="n">ylab</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\Delta \delta$ [$</span><span class="si">{}</span><span class="s2">^{\prime\prime}$]&quot;</span><span class="p">,</span>
                <span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Wrapper for plt.imshow, with colorbar and colormap normalization.</span>
@@ -383,7 +446,7 @@ title="Source repository"
         <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span>
     <span class="p">)</span>
 
-    <span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
     <span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="n">clab</span><span class="p">)</span>
 
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">xlab</span><span class="p">)</span>
@@ -567,7 +630,7 @@ title="Source repository"
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    splitter : `mpol.crossval.RandomCellSplitGridded` object</span>
-<span class="sd">        Iterator that returns a `(train, test)` pair of `GriddedDataset`s </span>
+<span class="sd">        Iterator that returns a `(train, test)` pair of `GriddedDataset` </span>
 <span class="sd">        for each iteration.</span>
 <span class="sd">    channel : int, default=0</span>
 <span class="sd">        Channel (of the datasets in `splitter`) to use to generate figure</span>
@@ -586,40 +649,40 @@ title="Source repository"
 <span class="sd">    No assumption or correction is made concerning whether the (u,v) distances </span>
 <span class="sd">    are projected or deprojected.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="n">splitter</span><span class="o">.</span><span class="n">k</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="n">splitter</span><span class="o">.</span><span class="n">k</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+    <span class="n">cmap_train</span> <span class="o">=</span> <span class="n">mco</span><span class="o">.</span><span class="n">ListedColormap</span><span class="p">([</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">])</span>
+    <span class="n">cmap_test</span> <span class="o">=</span> <span class="n">mco</span><span class="o">.</span><span class="n">ListedColormap</span><span class="p">([</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">])</span>
+    
+    <span class="n">kw</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">}</span>
+    <span class="n">image_kw</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;origin&quot;</span><span class="p">:</span><span class="s2">&quot;lower&quot;</span><span class="p">,</span> <span class="s2">&quot;interpolation&quot;</span><span class="p">:</span><span class="s2">&quot;none&quot;</span><span class="p">}</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Training data: black, test data: red&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">ii</span><span class="p">,</span> <span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">splitter</span><span class="p">):</span>
         <span class="n">train_mask</span> <span class="o">=</span> <span class="n">torch2npy</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">ground_mask</span><span class="p">[</span><span class="n">channel</span><span class="p">])</span>
         <span class="n">test_mask</span> <span class="o">=</span> <span class="n">torch2npy</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">ground_mask</span><span class="p">[</span><span class="n">channel</span><span class="p">])</span>
-        <span class="n">vis_ext</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">vis_ext</span>
+        <span class="n">vis_ext</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">vis_ext</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1e3</span>
 
-        <span class="n">cmap_train</span> <span class="o">=</span> <span class="n">mco</span><span class="o">.</span><span class="n">ListedColormap</span><span class="p">([</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">])</span>
-        <span class="n">cmap_test</span> <span class="o">=</span> <span class="n">mco</span><span class="o">.</span><span class="n">ListedColormap</span><span class="p">([</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">])</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">train_mask</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">vis_ext</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_train</span><span class="p">,</span> <span class="o">**</span><span class="n">image_kw</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">test_mask</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">vis_ext</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_test</span><span class="p">,</span> <span class="o">**</span><span class="n">image_kw</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">test_mask</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">vis_ext</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_test</span><span class="p">,</span> <span class="o">**</span><span class="n">image_kw</span><span class="p">)</span>
 
-        <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">train_mask</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s2">&quot;lower&quot;</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">vis_ext</span><span class="p">,</span> 
-            <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_train</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>      
-        <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">test_mask</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s2">&quot;lower&quot;</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">vis_ext</span><span class="p">,</span> 
-            <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_test</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>     
-        <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">test_mask</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s2">&quot;lower&quot;</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">vis_ext</span><span class="p">,</span> 
-            <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_test</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>            
-
-        <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;k-fold </span><span class="si">{:}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ii</span><span class="p">))</span>
-
-    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Training set (black)</span><span class="se">\n</span><span class="s2">Test set (red)&quot;</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Test set&quot;</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;k-fold </span><span class="si">{</span><span class="n">ii</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">aa</span> <span class="ow">in</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">aa</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s2">&quot;both&quot;</span><span class="p">)</span>
         <span class="n">aa</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticklabels</span><span class="p">([])</span>
         <span class="n">aa</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticklabels</span><span class="p">([])</span>
 
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;u [k$\lambda$]&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;v [k$\lambda$]&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">tick_right</span><span class="p">()</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;u [M$\lambda$]&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;v [M$\lambda$]&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s2">&quot;both&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_label_position</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>    
+    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">tick_right</span><span class="p">()</span>    
+    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_label_position</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">)</span> 
 
-    <span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="mf">0.92</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">save_prefix</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_prefix</span> <span class="o">+</span> <span class="s1">&#39;_split_diag.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
@@ -629,27 +692,41 @@ title="Source repository"
     <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span></div>
 
 
-<div class="viewcode-block" id="train_diagnostics_fig"><a class="viewcode-back" href="../../api.html#mpol.plot.train_diagnostics_fig">[docs]</a><span class="k">def</span> <span class="nf">train_diagnostics_fig</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">losses</span><span class="o">=</span><span class="p">[],</span> <span class="n">train_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
-                        <span class="n">save_prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="train_diagnostics_fig"><a class="viewcode-back" href="../../api.html#mpol.plot.train_diagnostics_fig">[docs]</a><span class="k">def</span> <span class="nf">train_diagnostics_fig</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">losses</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">learn_rates</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fluxes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
+                          <span class="n">old_model_image</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">old_model_epoch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="n">kfold</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">epoch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">save_prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Figure for model diagnostics during an optimization loop. For a `model` in </span>
 <span class="sd">    a given state, plots the current: </span>
-<span class="sd">        - model image (both linear and arcsinh colormap normalization)</span>
-<span class="sd">        - gradient image</span>
-<span class="sd">        - loss function</span>
+<span class="sd">    - model image</span>
+<span class="sd">    - flux of model image</span>
+<span class="sd">    - gradient image</span>
+<span class="sd">    - difference image between `old_model_image` and current model image</span>
+<span class="sd">    - loss function</span>
+<span class="sd">    - learning rate</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    model : `torch.nn.Module` object</span>
-<span class="sd">        A neural network; instance of the `mpol.precomposed.SimpleNet` class.</span>
+<span class="sd">        A neural network module; instance of the `mpol.precomposed.SimpleNet` class.</span>
 <span class="sd">    losses : list</span>
 <span class="sd">        Loss value at each epoch in the training loop</span>
-<span class="sd">    train_state : dict, default=None</span>
-<span class="sd">        Dictionary containing current training parameter values. Used for </span>
-<span class="sd">        figure title and savefile name.</span>
+<span class="sd">    learn_rates : list</span>
+<span class="sd">        Learning rate at each epoch in the training loop  </span>
+<span class="sd">    fluxes : list</span>
+<span class="sd">        Total flux in model image at each epoch in the training loop</span>
+<span class="sd">    old_model_image : 2D image array, default=None</span>
+<span class="sd">        Model image of a previous epoch for comparison to current image  </span>
+<span class="sd">    old_model_epoch : int</span>
+<span class="sd">        Epoch of `old_model_image`</span>
+<span class="sd">    kfold : int, default=None</span>
+<span class="sd">        Current cross-validation k-fold</span>
+<span class="sd">    epoch : int, default=None</span>
+<span class="sd">        Current training epoch</span>
 <span class="sd">    channel : int, default=0</span>
 <span class="sd">        Channel (of the datasets in `splitter`) to use to generate figure        </span>
-<span class="sd">    save_prefix : string, default = None</span>
+<span class="sd">    save_prefix : str, default = None</span>
 <span class="sd">        Prefix for saved figure name. If None, the figure won&#39;t be saved</span>
 
 <span class="sd">    Returns</span>
@@ -660,75 +737,665 @@ title="Source repository"
 <span class="sd">        Axes of the generated figure</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
 
-    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">train_state</span><span class="p">)</span>
-
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pixel size </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">cell_size</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1e3</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mas, N_pix </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">npix</span><span class="si">}</span><span class="se">\n</span><span class="s2">k-fold </span><span class="si">{</span><span class="n">kfold</span><span class="si">}</span><span class="s2">, epoch </span><span class="si">{</span><span class="n">epoch</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    
     <span class="n">mod_im</span> <span class="o">=</span> <span class="n">torch2npy</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">icube</span><span class="o">.</span><span class="n">sky_cube</span><span class="p">[</span><span class="n">channel</span><span class="p">])</span>
     <span class="n">mod_grad</span> <span class="o">=</span> <span class="n">torch2npy</span><span class="p">(</span><span class="n">packed_cube_to_sky_cube</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">bcube</span><span class="o">.</span><span class="n">base_cube</span><span class="o">.</span><span class="n">grad</span><span class="p">)[</span><span class="n">channel</span><span class="p">])</span>
     <span class="n">extent</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">icube</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">img_ext</span>
 
     <span class="c1"># model image (linear colormap)</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">plot_image</span><span class="p">(</span><span class="n">mod_im</span><span class="p">,</span> <span class="n">extent</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Model image&quot;</span><span class="p">)</span>
+    <span class="c1"># ax = axes[0,0]</span>
+    <span class="c1"># plot_image(mod_im, extent, ax=ax, xlab=&#39;&#39;, ylab=&#39;&#39;)</span>
+    <span class="c1"># ax.set_title(&quot;Model image&quot;)</span>
 
     <span class="c1"># model image (asinh colormap)</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">plot_image</span><span class="p">(</span><span class="n">mod_im</span><span class="p">,</span> <span class="n">extent</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">get_image_cmap_norm</span><span class="p">(</span><span class="n">mod_im</span><span class="p">,</span> <span class="n">stretch</span><span class="o">=</span><span class="s1">&#39;asinh&#39;</span><span class="p">))</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Model image (asinh stretch)&quot;</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">plot_image</span><span class="p">(</span><span class="n">mod_im</span><span class="p">,</span> <span class="n">extent</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">get_image_cmap_norm</span><span class="p">(</span><span class="n">mod_im</span><span class="p">,</span> <span class="n">stretch</span><span class="o">=</span><span class="s1">&#39;asinh&#39;</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Model image&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
     <span class="c1"># gradient image</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">plot_image</span><span class="p">(</span><span class="n">mod_grad</span><span class="p">,</span> <span class="n">extent</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Gradient image&quot;</span><span class="p">)</span>
+    <span class="n">plot_image</span><span class="p">(</span><span class="n">mod_grad</span><span class="p">,</span> <span class="n">extent</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Gradient image&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-    <span class="c1"># loss function</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">losses</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Epoch&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Loss&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Loss function&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">old_model_image</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># current model image - model image at last stored epoch</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">diff_image</span> <span class="o">=</span> <span class="n">mod_im</span> <span class="o">-</span> <span class="n">old_model_image</span>
+        <span class="n">diff_im_norm</span> <span class="o">=</span> <span class="n">get_image_cmap_norm</span><span class="p">(</span><span class="n">diff_image</span><span class="p">,</span> <span class="n">symmetric</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">plot_image</span><span class="p">(</span><span class="n">diff_image</span><span class="p">,</span> <span class="n">extent</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;RdBu_r&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">diff_im_norm</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Difference (epoch </span><span class="si">{</span><span class="n">epoch</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">old_model_epoch</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        
+    <span class="k">if</span> <span class="n">losses</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># loss function</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">426</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">losses</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">losses</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_tick_params</span><span class="p">(</span><span class="n">labelbottom</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Loss&#39;</span><span class="p">)</span>
 
-    <span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">learn_rates</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>    
+        <span class="c1"># learning rate</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">428</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">learn_rates</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">learn_rates</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.3e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Epoch&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Learn rate&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">fluxes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># total flux in model image </span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.465</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">])</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fluxes</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">fluxes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+        <span class="c1"># ax.set_xlabel(&#39;Epoch&#39;, fontsize=8)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Flux [Jy]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">save_prefix</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_prefix</span> <span class="o">+</span> <span class="s1">&#39;_train_diag_kfold</span><span class="si">{}</span><span class="s1">_epoch</span><span class="si">{:05d}</span><span class="s1">.png&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">train_state</span><span class="p">[</span><span class="s2">&quot;kfold&quot;</span><span class="p">],</span> <span class="n">train_state</span><span class="p">[</span><span class="s2">&quot;epoch&quot;</span><span class="p">]),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_prefix</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;_train_diag_kfold</span><span class="si">{</span><span class="n">kfold</span><span class="si">}</span><span class="s2">_epoch</span><span class="si">{</span><span class="n">epoch</span><span class="si">:</span><span class="s2">05d</span><span class="si">}</span><span class="s2">.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
     
     <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
     <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span></div>
+
+
+<div class="viewcode-block" id="crossval_diagnostics_fig"><a class="viewcode-back" href="../../api.html#mpol.plot.crossval_diagnostics_fig">[docs]</a><span class="k">def</span> <span class="nf">crossval_diagnostics_fig</span><span class="p">(</span><span class="n">cv</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">save_prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Figure for model diagnostics of a cross-validation run. Plots: </span>
+<span class="sd">    - loss evolution for each k-fold</span>
+<span class="sd">    - cross-validation score per k-fold</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    cv : `mpol.crossval.CrossValidate` object</span>
+<span class="sd">        Instance of the `CrossValidate` class produced by a cross-validation loop</span>
+<span class="sd">    title : str, default=&quot;&quot;</span>
+<span class="sd">        Figure super-title</span>
+<span class="sd">    save_prefix : string, default = None</span>
+<span class="sd">        Prefix for saved figure name. If None, the figure won&#39;t be saved</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fig : Matplotlib `.Figure` instance</span>
+<span class="sd">        The generated figure</span>
+<span class="sd">    axes : Matplotlib `~.axes.Axes` class</span>
+<span class="sd">        Axes of the generated figure</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+    <span class="n">title</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Regularizers </span><span class="si">{</span><span class="n">cv</span><span class="o">.</span><span class="n">regularizers</span><span class="si">}</span><span class="se">\n</span><span class="s2">Split method: </span><span class="si">{</span><span class="n">cv</span><span class="o">.</span><span class="n">split_method</span><span class="si">}</span><span class="s2">, CV score </span><span class="si">{</span><span class="n">cv</span><span class="o">.</span><span class="n">score</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> +- </span><span class="si">{</span><span class="n">cv</span><span class="o">.</span><span class="n">score</span><span class="p">[</span><span class="s1">&#39;std&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">score</span><span class="p">[</span><span class="s1">&#39;all&#39;</span><span class="p">],</span> <span class="s1">&#39;k.&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">cv</span><span class="o">.</span><span class="n">score</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\mu$&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">cv</span><span class="o">.</span><span class="n">score</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">cv</span><span class="o">.</span><span class="n">score</span><span class="p">[</span><span class="s1">&#39;std&#39;</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\pm 1 \sigma$&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">cv</span><span class="o">.</span><span class="n">score</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">cv</span><span class="o">.</span><span class="n">score</span><span class="p">[</span><span class="s1">&#39;std&#39;</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">l</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">diagnostics</span><span class="p">[</span><span class="s1">&#39;loss_histories&#39;</span><span class="p">]):</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;k-fold </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;k-fold&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Score&quot;</span><span class="p">)</span>
+
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Epoch&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Loss&quot;</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">save_prefix</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_prefix</span> <span class="o">+</span> <span class="s2">&quot;_crossval_diagnostics.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span></div>
+
+
+<div class="viewcode-block" id="image_comparison_fig"><a class="viewcode-back" href="../../api.html#mpol.plot.image_comparison_fig">[docs]</a><span class="k">def</span> <span class="nf">image_comparison_fig</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">robust</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> 
+                         <span class="n">clean_fits</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">share_cscale</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
+                         <span class="n">xzoom</span><span class="o">=</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span> <span class="n">yzoom</span><span class="o">=</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
+                         <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                         <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
+                         <span class="n">save_prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Figure for comparison of MPoL model image to other image models. Plots: </span>
+<span class="sd">    - dirty image</span>
+<span class="sd">    - MPoL model image</span>
+<span class="sd">    - MPoL residual visibilities imaged</span>
+<span class="sd">    - clean image (if a .fits file is supplied)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    model : `torch.nn.Module` object</span>
+<span class="sd">        A neural network; instance of the `mpol.precomposed.SimpleNet` class.</span>
+<span class="sd">    u, v : array, unit=[k\lambda]</span>
+<span class="sd">        Data u- and v-coordinates</span>
+<span class="sd">    V : array, unit=[Jy]</span>
+<span class="sd">        Data visibility amplitudes</span>
+<span class="sd">    weights : array, unit=[Jy^-2]</span>
+<span class="sd">        Data weights        </span>
+<span class="sd">    robust : float, default=0.5</span>
+<span class="sd">        Robust weighting parameter used to create the dirty image of the </span>
+<span class="sd">        observed visibilities and separately of the MPoL residual visibilities  </span>
+<span class="sd">    clean_fits : str, default=None</span>
+<span class="sd">        Path to a clean .fits image</span>
+<span class="sd">    share_cscale : bool, default=False</span>
+<span class="sd">        Whether the MPoL model image, dirty image and clean image share the </span>
+<span class="sd">        same colorscale</span>
+<span class="sd">    xzoom, yzoom : list of float, default = [None, None]</span>
+<span class="sd">        X- and y- axis limits to zoom the images to. `xzoom` and `yzoom` should </span>
+<span class="sd">        both list values in ascending order (e.g. [-2, 3], not [3, -2])</span>
+<span class="sd">    title : str, default=&quot;&quot;</span>
+<span class="sd">        Figure super-title</span>
+<span class="sd">    channel : int, default=0</span>
+<span class="sd">        Channel of the model to use to generate figure        </span>
+<span class="sd">    save_prefix : string, default = None</span>
+<span class="sd">        Prefix for saved figure name. If None, the figure won&#39;t be saved</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fig : Matplotlib `.Figure` instance</span>
+<span class="sd">        The generated figure</span>
+<span class="sd">    axes : Matplotlib `~.axes.Axes` class</span>
+<span class="sd">        Axes of the generated figure</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+    <span class="n">title</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">MPoL pixel size </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">cell_size</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1e3</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mas, N_pix </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">npix</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">if</span> <span class="n">share_cscale</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Dirty and clean images use colorscale of MPoL image&quot;</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+
+    <span class="c1"># get MPoL model image</span>
+    <span class="n">mod_im</span> <span class="o">=</span> <span class="n">torch2npy</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">icube</span><span class="o">.</span><span class="n">sky_cube</span><span class="p">[</span><span class="n">channel</span><span class="p">])</span>
+    <span class="n">total_flux</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">cell_size</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">mod_im</span><span class="p">)</span>
+
+    <span class="c1"># get imaged MPoL residual visibilities</span>
+    <span class="n">im_resid</span><span class="p">,</span> <span class="n">norm_resid</span> <span class="o">=</span> <span class="n">get_residual_image</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">robust</span><span class="o">=</span><span class="n">robust</span><span class="p">)</span>
+
+    <span class="c1"># get dirty image</span>
+    <span class="n">imager</span> <span class="o">=</span> <span class="n">DirtyImager</span><span class="p">(</span>
+        <span class="n">coords</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">coords</span><span class="p">,</span>
+        <span class="n">uu</span><span class="o">=</span><span class="n">u</span><span class="p">,</span>
+        <span class="n">vv</span><span class="o">=</span><span class="n">v</span><span class="p">,</span>
+        <span class="n">weight</span><span class="o">=</span><span class="n">weights</span><span class="p">,</span>
+        <span class="n">data_re</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">real</span><span class="p">,</span>
+        <span class="n">data_im</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">imag</span>
+    <span class="p">)</span>
+    <span class="n">dirty_im</span><span class="p">,</span> <span class="n">dirty_beam</span> <span class="o">=</span> <span class="n">imager</span><span class="o">.</span><span class="n">get_dirty_image</span><span class="p">(</span><span class="n">weighting</span><span class="o">=</span><span class="s2">&quot;briggs&quot;</span><span class="p">,</span>
+                                        <span class="n">robust</span><span class="o">=</span><span class="n">robust</span><span class="p">,</span>
+                                        <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;Jy/arcsec^2&quot;</span><span class="p">)</span>
+    <span class="n">dirty_im</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">dirty_im</span><span class="p">)</span>
+
+    <span class="c1"># get clean image and beam</span>
+    <span class="k">if</span> <span class="n">clean_fits</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">fits_obj</span> <span class="o">=</span> <span class="n">ProcessFitsImage</span><span class="p">(</span><span class="n">clean_fits</span><span class="p">)</span>
+        <span class="n">clean_im</span><span class="p">,</span> <span class="n">clean_im_ext</span><span class="p">,</span> <span class="n">clean_beam</span> <span class="o">=</span> <span class="n">fits_obj</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">beam</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># set image colorscales</span>
+    <span class="n">norm_mod</span> <span class="o">=</span> <span class="n">get_image_cmap_norm</span><span class="p">(</span><span class="n">mod_im</span><span class="p">,</span> <span class="n">stretch</span><span class="o">=</span><span class="s1">&#39;asinh&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">share_cscale</span><span class="p">:</span>
+        <span class="n">norm_dirty</span> <span class="o">=</span> <span class="n">norm_clean</span> <span class="o">=</span> <span class="n">norm_mod</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">norm_dirty</span> <span class="o">=</span> <span class="n">get_image_cmap_norm</span><span class="p">(</span><span class="n">dirty_im</span><span class="p">,</span> <span class="n">stretch</span><span class="o">=</span><span class="s1">&#39;asinh&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">clean_fits</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">norm_clean</span> <span class="o">=</span> <span class="n">get_image_cmap_norm</span><span class="p">(</span><span class="n">clean_im</span><span class="p">,</span> <span class="n">stretch</span><span class="o">=</span><span class="s1">&#39;asinh&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># MPoL model image</span>
+    <span class="n">plot_image</span><span class="p">(</span><span class="n">mod_im</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">icube</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">img_ext</span><span class="p">,</span>
+                    <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm_mod</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="c1"># imaged MPoL residual visibilities</span>
+    <span class="n">plot_image</span><span class="p">(</span><span class="n">im_resid</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">icube</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">img_ext</span><span class="p">,</span> 
+                <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm_resid</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;RdBu_r&#39;</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="c1"># dirty image</span>
+    <span class="n">plot_image</span><span class="p">(</span><span class="n">dirty_im</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">icube</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">img_ext</span><span class="p">,</span>  
+                    <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm_dirty</span><span class="p">)</span>
+    
+    <span class="c1"># clean image</span>
+    <span class="k">if</span> <span class="n">clean_fits</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">plot_image</span><span class="p">(</span><span class="n">clean_im</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">clean_im_ext</span><span class="p">,</span> 
+                    <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm_clean</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># add clean beam to plot</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">xzoom</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span><span class="n">yzoom</span><span class="p">):</span>
+            <span class="n">beam_xy</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.85</span> <span class="o">*</span> <span class="n">xzoom</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mf">0.85</span> <span class="o">*</span> <span class="n">yzoom</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">beam_xy</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.85</span> <span class="o">*</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span> <span class="mf">0.85</span> <span class="o">*</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="n">beam_ellipse</span> <span class="o">=</span> <span class="n">Ellipse</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">beam_xy</span><span class="p">,</span>
+                            <span class="n">width</span><span class="o">=</span><span class="n">clean_beam</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> 
+                            <span class="n">height</span><span class="o">=</span><span class="n">clean_beam</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> 
+                            <span class="n">angle</span><span class="o">=-</span><span class="n">clean_beam</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> 
+                            <span class="n">color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span>
+                            <span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">beam_ellipse</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">xzoom</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span><span class="n">yzoom</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="n">jj</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">xzoom</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">xzoom</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="n">jj</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">yzoom</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">yzoom</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dirty image (robust </span><span class="si">{</span><span class="n">robust</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MPoL image (flux </span><span class="si">{</span><span class="n">total_flux</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> Jy)&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MPoL residual V imaged (robust </span><span class="si">{</span><span class="n">robust</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>      
+    <span class="k">if</span> <span class="n">clean_fits</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Clean image (beam </span><span class="si">{</span><span class="n">clean_beam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1e3</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> $</span><span class="se">\\</span><span class="s2">times$ </span><span class="si">{</span><span class="n">clean_beam</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1e3</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> mas)&quot;</span><span class="p">)</span>  
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">save_prefix</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_prefix</span> <span class="o">+</span> <span class="s2">&quot;_image_comparison.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span></div>
+
+
+<div class="viewcode-block" id="vis_1d_fig"><a class="viewcode-back" href="../../api.html#mpol.plot.vis_1d_fig">[docs]</a><span class="k">def</span> <span class="nf">vis_1d_fig</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">geom</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rescale_flux</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
+              <span class="n">bin_width</span><span class="o">=</span><span class="mf">20e3</span><span class="p">,</span> <span class="n">q_logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">save_prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Figure for comparison of 1D projected MPoL model visibilities and observed </span>
+<span class="sd">    visibilities. Plots:</span>
+<span class="sd">    - Re(V): observed and MPoL model (projected unless `geom` is supplied)</span>
+<span class="sd">    - Residual Re(V): observed - MPoL model (projected unless `geom` is supplied)</span>
+<span class="sd">    - Im(V): observed and MPoL model (projected unless `geom` is supplied)</span>
+<span class="sd">    - Residual Im(V): observed - MPoL model (projected unless `geom` is supplied)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    model : `torch.nn.Module` object</span>
+<span class="sd">        A neural network; instance of the `mpol.precomposed.SimpleNet` class.</span>
+<span class="sd">    u, v : array, unit=[k\lambda]</span>
+<span class="sd">        Data u- and v-coordinates</span>
+<span class="sd">    V : array, unit=[Jy]</span>
+<span class="sd">        Data visibility amplitudes</span>
+<span class="sd">    weights : array, unit=[Jy^-2]</span>
+<span class="sd">        Data weights        </span>
+<span class="sd">    geom : dict</span>
+<span class="sd">        Dictionary of source geometry. If passed in, visibilities will be </span>
+<span class="sd">        deprojected prior to plotting. Keys:</span>
+<span class="sd">            &quot;incl&quot; : float, unit=[deg]</span>
+<span class="sd">                Inclination </span>
+<span class="sd">            &quot;Omega&quot; : float, unit=[deg]</span>
+<span class="sd">                Position angle of the ascending node </span>
+<span class="sd">            &quot;omega&quot; : float, unit=[deg]</span>
+<span class="sd">                Argument of periastron</span>
+<span class="sd">            &quot;dRA&quot; : float, unit=[arcsec]</span>
+<span class="sd">                Phase center offset in right ascension. Positive is west of north.</span>
+<span class="sd">            &quot;dDec&quot; : float, unit=[arcsec]</span>
+<span class="sd">                Phase center offset in declination.</span>
+<span class="sd">    rescale_flux : bool</span>
+<span class="sd">        If True, the visibility amplitudes are rescaled to account </span>
+<span class="sd">        for the difference between the inclined (observed) brightness and the </span>
+<span class="sd">        assumed face-on brightness, assuming the emission is optically thick. </span>
+<span class="sd">        The source&#39;s integrated (2D) flux is assumed to be:</span>
+<span class="sd">            :math:`F = \cos(i) \int_r^{r=R}{I(r) 2 \pi r dr}`.</span>
+<span class="sd">        No rescaling would be appropriate in the optically thin limit.                 </span>
+<span class="sd">    bin_width : float, default=20e3</span>
+<span class="sd">        Bin size [klambda] for baselines</span>
+<span class="sd">    q_logx : bool, default=True</span>
+<span class="sd">        Whether to plot visibilities in log-baseline</span>
+<span class="sd">    title : str, default=&quot;&quot;</span>
+<span class="sd">        Figure super-title</span>
+<span class="sd">    channel : int, default=0</span>
+<span class="sd">        Channel of the model to use to generate figure        </span>
+<span class="sd">    save_prefix : string, default = None</span>
+<span class="sd">        Prefix for saved figure name. If None, the figure won&#39;t be saved</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fig : Matplotlib `.Figure` instance</span>
+<span class="sd">        The generated figure</span>
+<span class="sd">    axes : Matplotlib `~.axes.Axes` class</span>
+<span class="sd">        Axes of the generated figure</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This routine requires the `frank &lt;https://github.com/discsim/frank&gt;`_ package</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">frank.geometry</span> <span class="kn">import</span> <span class="n">apply_phase_shift</span><span class="p">,</span> <span class="n">deproject</span>
+    <span class="kn">from</span> <span class="nn">frank.utilities</span> <span class="kn">import</span> <span class="n">UVDataBinner</span>
+
+    <span class="c1"># get MPoL residual and model visibilities</span>
+    <span class="n">Vresid</span><span class="p">,</span> <span class="n">Vmod</span> <span class="o">=</span> <span class="n">get_vis_residuals</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">return_Vmod</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">geom</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>    
+        <span class="c1"># phase-shift the visibilities</span>
+        <span class="n">V</span> <span class="o">=</span> <span class="n">apply_phase_shift</span><span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">geom</span><span class="p">[</span><span class="s2">&quot;dRA&quot;</span><span class="p">],</span> <span class="n">geom</span><span class="p">[</span><span class="s2">&quot;dDec&quot;</span><span class="p">],</span> <span class="n">inverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">Vmod</span> <span class="o">=</span> <span class="n">apply_phase_shift</span><span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">Vmod</span><span class="p">,</span> <span class="n">geom</span><span class="p">[</span><span class="s2">&quot;dRA&quot;</span><span class="p">],</span> <span class="n">geom</span><span class="p">[</span><span class="s2">&quot;dDec&quot;</span><span class="p">],</span> <span class="n">inverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">Vresid</span> <span class="o">=</span> <span class="n">apply_phase_shift</span><span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">Vresid</span><span class="p">,</span> <span class="n">geom</span><span class="p">[</span><span class="s2">&quot;dRA&quot;</span><span class="p">],</span> <span class="n">geom</span><span class="p">[</span><span class="s2">&quot;dDec&quot;</span><span class="p">],</span> <span class="n">inverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># deproject the (u,v) points</span>
+        <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">deproject</span><span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">geom</span><span class="p">[</span><span class="s2">&quot;incl&quot;</span><span class="p">],</span> <span class="n">geom</span><span class="p">[</span><span class="s2">&quot;Omega&quot;</span><span class="p">])</span>
+        <span class="c1"># convert back to [k\lambda]</span>
+        <span class="n">u</span> <span class="o">/=</span> <span class="mf">1e3</span>
+        <span class="n">v</span> <span class="o">/=</span> <span class="mf">1e3</span>
+
+        <span class="c1"># if the source is optically thick, rescale the deprojected V(q)</span>
+        <span class="k">if</span> <span class="n">rescale_flux</span><span class="p">:</span> 
+            <span class="n">V</span><span class="o">.</span><span class="n">real</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">geom</span><span class="p">[</span><span class="s2">&quot;incl&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span><span class="p">)</span>
+            <span class="n">Vmod</span><span class="o">.</span><span class="n">real</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">geom</span><span class="p">[</span><span class="s2">&quot;incl&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span><span class="p">)</span>
+            <span class="n">Vresid</span><span class="o">.</span><span class="n">real</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">geom</span><span class="p">[</span><span class="s2">&quot;incl&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span><span class="p">)</span>
+            <span class="n">weights</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">geom</span><span class="p">[</span><span class="s2">&quot;incl&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+
+    <span class="c1"># bin projected observed visibilities</span>
+    <span class="c1"># (`UVDataBinner` expects `u`, `v` in [lambda])</span>
+    <span class="n">binned_Vtrue</span> <span class="o">=</span> <span class="n">UVDataBinner</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">),</span> <span class="n">V</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">bin_width</span><span class="p">)</span>
+
+    <span class="c1"># bin projected model and residual visibilities</span>
+    <span class="n">binned_Vmod</span> <span class="o">=</span> <span class="n">UVDataBinner</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">),</span> <span class="n">Vmod</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">bin_width</span><span class="p">)</span>
+    <span class="n">binned_Vresid</span> <span class="o">=</span> <span class="n">UVDataBinner</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">),</span> <span class="n">Vresid</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">bin_width</span><span class="p">)</span>
+
+    <span class="c1"># baselines [Mlambda]</span>
+    <span class="n">qq</span> <span class="o">=</span> <span class="n">binned_Vtrue</span><span class="o">.</span><span class="n">uv</span> <span class="o">/</span> <span class="mf">1e6</span>
+
+    <span class="n">amax_binVres_re</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">binned_Vresid</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">real</span><span class="p">))</span>
+    <span class="n">amax_binVres_im</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">binned_Vresid</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">imag</span><span class="p">))</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">geom</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Projected visibilities&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Deprojected visibilities&quot;</span>
+        <span class="k">if</span> <span class="n">rescale_flux</span><span class="p">:</span>
+            <span class="n">title</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Re(V) and weights rescaled for optically thick source&quot;</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+
+    <span class="c1"># *projected* Re(V) -- observed and MPoL model</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">qq</span><span class="p">,</span> <span class="n">binned_Vtrue</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">real</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="s1">&#39;k.&#39;</span><span class="p">,</span> 
+                    <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Obs., </span><span class="si">{</span><span class="n">bin_width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1e3</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> k$</span><span class="se">\\</span><span class="s2">lambda$ bins&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">qq</span><span class="p">,</span> <span class="n">binned_Vmod</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">real</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="s1">&#39;r.&#39;</span><span class="p">,</span> 
+                    <span class="n">label</span><span class="o">=</span><span class="s1">&#39;MPoL&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+    <span class="c1"># *projected* Im(V) -- observed and MPoL model</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">qq</span><span class="p">,</span> <span class="n">binned_Vtrue</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">imag</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="s1">&#39;k.&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">qq</span><span class="p">,</span> <span class="n">binned_Vmod</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">imag</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="s1">&#39;r.&#39;</span><span class="p">)</span>
+
+    <span class="c1"># *projected* residual Re(V) = observed - MPoL model</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">qq</span><span class="p">,</span> <span class="n">binned_Vresid</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">real</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;#33C1FF&#39;</span><span class="p">,</span>
+                    <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Mean </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">binned_Vresid</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">real</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1e3</span><span class="si">:</span><span class="s2">.1e</span><span class="si">}</span><span class="s2"> mJy&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+    <span class="c1"># *projected* residual Im(V) = observed - MPoL model</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">qq</span><span class="p">,</span> <span class="n">binned_Vresid</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">imag</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;#33C1FF&#39;</span><span class="p">,</span>
+                    <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Mean </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">binned_Vresid</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1e3</span><span class="si">:</span><span class="s2">.1e</span><span class="si">}</span><span class="s2"> mJy&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+    <span class="c1"># y-lims on residual plots symmetric about 0</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="n">amax_binVres_re</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">amax_binVres_re</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="n">amax_binVres_im</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">amax_binVres_im</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mf">0.9</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">qq</span><span class="p">),</span> <span class="mf">1.1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">qq</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">q_logx</span><span class="p">:</span>
+            <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ii</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_tick_params</span><span class="p">(</span><span class="n">labelbottom</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Re(V) [mJy]&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Resid. Re(V) [mJy]&#39;</span><span class="p">)</span>            
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Im(V) [mJy]&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Resid. Im(V) [mJy]&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Baseline [M$\lambda$]&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">save_prefix</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">geom</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">suffix</span> <span class="o">=</span> <span class="s2">&quot;_projected_&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">suffix</span> <span class="o">=</span> <span class="s2">&quot;_deprojected_&quot;</span>
+            <span class="k">if</span> <span class="n">rescale_flux</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="n">suffix</span> <span class="o">+=</span> <span class="s2">&quot;rescaled_&quot;</span>
+
+        <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_prefix</span> <span class="o">+</span> <span class="n">suffix</span> <span class="o">+</span> <span class="s2">&quot;visibilities.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span></div>
+    
+
+<div class="viewcode-block" id="radial_fig"><a class="viewcode-back" href="../../api.html#mpol.plot.radial_fig">[docs]</a><span class="k">def</span> <span class="nf">radial_fig</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">V</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
+               <span class="n">rescale_flux</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bin_width</span><span class="o">=</span><span class="mf">20e3</span><span class="p">,</span> <span class="n">q_logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> 
+               <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">save_prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Figure for analysis of 1D (radial) brightness profile of MPoL model image,</span>
+<span class="sd">    using a user-supplied geometry. Plots:</span>
+<span class="sd">    - MPoL model image</span>
+<span class="sd">    - 1D (radial) brightness profile extracted from MPoL image </span>
+<span class="sd">      (supply `dist` to show second x-axis in [AU])</span>
+<span class="sd">    - Deprojectd Re(V): binned MPoL model and observations (if u, v, V, weights supplied)</span>
+<span class="sd">    - Deprojected Im(V): binned MPoL model and observations (if u, v, V, weights supplied)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    model : `torch.nn.Module` object</span>
+<span class="sd">        A neural network; instance of the `mpol.precomposed.SimpleNet` class.</span>
+<span class="sd">    geom : dict</span>
+<span class="sd">        Dictionary of source geometry. Used to deproject image and visibilities.</span>
+<span class="sd">        Keys:</span>
+<span class="sd">            &quot;incl&quot; : float, unit=[deg]</span>
+<span class="sd">                Inclination </span>
+<span class="sd">            &quot;Omega&quot; : float, unit=[deg]</span>
+<span class="sd">                Position angle of the ascending node </span>
+<span class="sd">            &quot;omega&quot; : float, unit=[deg]</span>
+<span class="sd">                Argument of periastron</span>
+<span class="sd">            &quot;dRA&quot; : float, unit=[arcsec]</span>
+<span class="sd">                Phase center offset in right ascension. Positive is west of north.</span>
+<span class="sd">            &quot;dDec&quot; : float, unit=[arcsec]</span>
+<span class="sd">                Phase center offset in declination.</span>
+<span class="sd">    u, v : array, optional, unit=[k\lambda], default=None</span>
+<span class="sd">        Data u- and v-coordinates</span>
+<span class="sd">    V : array, optional, unit=[Jy], default=None</span>
+<span class="sd">        Data visibility amplitudes</span>
+<span class="sd">    weights : array, optional, unit=[Jy^-2], default=None</span>
+<span class="sd">        Data weights        </span>
+<span class="sd">    dist : float, optional, unit = [AU], default = None</span>
+<span class="sd">        Distance to source, used to show second x-axis for I(r) in [AU]                  </span>
+<span class="sd">    rescale_flux : bool</span>
+<span class="sd">        If True, the visibility amplitudes are rescaled to account </span>
+<span class="sd">        for the difference between the inclined (observed) brightness and the </span>
+<span class="sd">        assumed face-on brightness, assuming the emission is optically thick. </span>
+<span class="sd">        The source&#39;s integrated (2D) flux is assumed to be:</span>
+<span class="sd">            :math:`F = \cos(i) \int_r^{r=R}{I(r) 2 \pi r dr}`.</span>
+<span class="sd">        No rescaling would be appropriate in the optically thin limit.                 </span>
+<span class="sd">    bin_width : float, default=20e3</span>
+<span class="sd">        Bin size [klambda] in which to bin observed visibility points</span>
+<span class="sd">    q_logx : bool, default=True</span>
+<span class="sd">        Whether to plot visibilities in log-baseline</span>
+<span class="sd">    title : str, default=&quot;&quot;</span>
+<span class="sd">        Figure super-title</span>
+<span class="sd">    channel : int, default=0</span>
+<span class="sd">        Channel of the model to use to generate figure        </span>
+<span class="sd">    save_prefix : string, default = None</span>
+<span class="sd">        Prefix for saved figure name. If None, the figure won&#39;t be saved</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fig : Matplotlib `.Figure` instance</span>
+<span class="sd">        The generated figure</span>
+<span class="sd">    axes : Matplotlib `~.axes.Axes` class</span>
+<span class="sd">        Axes of the generated figure</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This routine requires the `frank &lt;https://github.com/discsim/frank&gt;`_ package</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">weights</span><span class="p">]):</span>
+        <span class="kn">from</span> <span class="nn">frank.geometry</span> <span class="kn">import</span> <span class="n">apply_phase_shift</span><span class="p">,</span> <span class="n">deproject</span>
+        <span class="kn">from</span> <span class="nn">frank.utilities</span> <span class="kn">import</span> <span class="n">UVDataBinner</span>
+
+        <span class="c1"># phase-shift the observed visibilities</span>
+        <span class="n">V</span> <span class="o">=</span> <span class="n">apply_phase_shift</span><span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">geom</span><span class="p">[</span><span class="s2">&quot;dRA&quot;</span><span class="p">],</span> <span class="n">geom</span><span class="p">[</span><span class="s2">&quot;dDec&quot;</span><span class="p">],</span> <span class="n">inverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># deproject the observed (u,v) points</span>
+        <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">deproject</span><span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">geom</span><span class="p">[</span><span class="s2">&quot;incl&quot;</span><span class="p">],</span> <span class="n">geom</span><span class="p">[</span><span class="s2">&quot;Omega&quot;</span><span class="p">])</span>
+        <span class="c1"># convert back to [k\lambda]</span>
+        <span class="n">u</span> <span class="o">/=</span> <span class="mf">1e3</span>
+        <span class="n">v</span> <span class="o">/=</span> <span class="mf">1e3</span>
+
+        <span class="c1"># if the source is optically thick, rescale the deprojected V(q)</span>
+        <span class="k">if</span> <span class="n">rescale_flux</span><span class="p">:</span> 
+            <span class="n">V</span><span class="o">.</span><span class="n">real</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">geom</span><span class="p">[</span><span class="s2">&quot;incl&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span><span class="p">)</span>
+            <span class="n">weights</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">geom</span><span class="p">[</span><span class="s2">&quot;incl&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+
+        <span class="c1"># bin observed visibilities</span>
+        <span class="c1"># (`UVDataBinner` expects `u`, `v` in [lambda])</span>
+        <span class="n">binned_Vtrue</span> <span class="o">=</span> <span class="n">UVDataBinner</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">),</span> <span class="n">V</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">bin_width</span><span class="p">)</span>
+
+    <span class="c1"># model radial image profile</span>
+    <span class="n">rs</span><span class="p">,</span> <span class="n">Is</span> <span class="o">=</span> <span class="n">radialI</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">icube</span><span class="p">,</span> <span class="n">geom</span><span class="p">)</span>
+
+    <span class="c1"># model radial visibility profile</span>
+    <span class="n">q_mod</span><span class="p">,</span> <span class="n">V_mod</span> <span class="o">=</span> <span class="n">radialV</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">fcube</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span> <span class="n">rescale_flux</span><span class="o">=</span><span class="n">rescale_flux</span><span class="p">)</span>
+
+    <span class="c1"># MPoL model image</span>
+    <span class="n">mod_im</span> <span class="o">=</span> <span class="n">torch2npy</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">icube</span><span class="o">.</span><span class="n">sky_cube</span><span class="p">[</span><span class="n">channel</span><span class="p">])</span>
+    <span class="n">total_flux</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">cell_size</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">mod_im</span><span class="p">)</span>
+
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+    <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+
+    <span class="n">title</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Geometry (units: deg, arcsec):</span><span class="se">\n</span><span class="si">{</span><span class="n">geom</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+
+    <span class="c1"># MPoL model image</span>
+    <span class="n">norm_mod</span> <span class="o">=</span> <span class="n">get_image_cmap_norm</span><span class="p">(</span><span class="n">mod_im</span><span class="p">,</span> <span class="n">stretch</span><span class="o">=</span><span class="s1">&#39;asinh&#39;</span><span class="p">)</span>    
+    <span class="n">plot_image</span><span class="p">(</span><span class="n">mod_im</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">icube</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">img_ext</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm_mod</span><span class="p">)</span>
+    
+    <span class="c1"># MPoL model I(r_arcsec)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rs</span><span class="p">,</span> <span class="n">Is</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;MPoL&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+    <span class="c1"># I(r_AU) </span>
+    <span class="k">if</span> <span class="n">dist</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax2top</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">twiny</span><span class="p">()</span>
+        <span class="n">ax2top</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rs</span> <span class="o">*</span> <span class="n">dist</span><span class="p">,</span> <span class="n">Is</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Re(V) -- observed and MPoL model</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">weights</span><span class="p">]):</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">binned_Vtrue</span><span class="o">.</span><span class="n">uv</span> <span class="o">/</span> <span class="mf">1e6</span><span class="p">,</span> <span class="n">binned_Vtrue</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">real</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="s1">&#39;k.&#39;</span><span class="p">,</span> 
+                    <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Obs., </span><span class="si">{</span><span class="n">bin_width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1e3</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> k$</span><span class="se">\\</span><span class="s2">lambda$ bins&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">q_mod</span> <span class="o">/</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">V_mod</span><span class="o">.</span><span class="n">real</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="s1">&#39;r.-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;MPoL&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+    <span class="c1"># Im(V) -- observed and MPoL model</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">weights</span><span class="p">]):</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">binned_Vtrue</span><span class="o">.</span><span class="n">uv</span> <span class="o">/</span> <span class="mf">1e6</span><span class="p">,</span> <span class="n">binned_Vtrue</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">imag</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="s1">&#39;k.&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">q_mod</span> <span class="o">/</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">V_mod</span><span class="o">.</span><span class="n">imag</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">,</span> <span class="s1">&#39;r.-&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">q_logx</span><span class="p">:</span>
+            <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">]):</span>
+            <span class="n">q_obs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+            <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">right</span><span class="o">=</span><span class="mf">1.1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">q_obs</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1e3</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">right</span><span class="o">=</span><span class="mf">1.1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">q_mod</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1e3</span><span class="p">)</span>
+
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MPoL image (flux </span><span class="si">{</span><span class="n">total_flux</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> Jy)&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;I [Jy / arcsec$^2$]&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;r [arcsec]&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dist</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax2top</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;#1A9E46&#39;</span><span class="p">)</span>
+        <span class="n">ax2top</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;#1A9E46&#39;</span><span class="p">)</span>
+        <span class="n">ax2top</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;r [AU]&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#1A9E46&#39;</span><span class="p">)</span>
+        <span class="n">xlims</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()</span>
+        <span class="n">ax2top</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">xlims</span><span class="p">,</span> <span class="n">dist</span><span class="p">))</span>
+        
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_tick_params</span><span class="p">(</span><span class="n">labelbottom</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Re(V) [mJy]&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Im(V) [mJy]&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Baseline [M$\lambda$]&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">save_prefix</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_prefix</span> <span class="o">+</span> <span class="s2">&quot;_radial_profiles.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span></div>
+    
 </pre></div>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Ian Czekala<br/>
-  
-      &copy; Copyright 2019-22, Ian Czekala.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Ian Czekala
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2019-22, Ian Czekala.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

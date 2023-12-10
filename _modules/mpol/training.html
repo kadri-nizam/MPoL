@@ -1,297 +1,293 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mpol.training &#8212; MPoL 0.1.13 documentation</title>
-    
+    <title>mpol.training &#8212; MPoL 0.2.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="https://buttons.github.io/buttons.js"></script>
-    <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/mpol/training';</script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">MPoL 0.1.13 documentation</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  User Guide
- </span>
-</p>
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="MPoL 0.2.0 documentation - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="MPoL 0.2.0 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../rml_intro.html">
-   Introduction to Regularized Maximum Likelihood Imaging
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../installation.html">
-   MPoL Installation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../units-and-conventions.html">
-   Units and Conventions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../developer-documentation.html">
-   Developer Documentation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../api.html">
-   API
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../rml_intro.html">Introduction to Regularized Maximum Likelihood Imaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">MPoL Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../units-and-conventions.html">Units and Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-documentation.html">Developer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Tutorials
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/PyTorch.html">
-   Introduction to PyTorch: Tensors and Gradient Descent
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/gridder.html">
-   Gridding and diagnostic images
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/optimization.html">
-   Intro to RML with MPoL
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/loose-visibilities.html">
-   Likelihood functions and model visibilities
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/crossvalidation.html">
-   Cross validation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/gpu_setup.html">
-   GPU Acceleration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/initializedirtyimage.html">
-   Initializing with the Dirty Image
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../large-tutorials/HD143006_part_1.html">
-   HD143006 Tutorial Part 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../large-tutorials/HD143006_part_2.html">
-   HD143006 Tutorial Part 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ci-tutorials/fakedata.html">
-   Making a Mock Dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../large-tutorials/pyro.html">
-   Parametric Inference with Pyro
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/PyTorch.html">Introduction to PyTorch: Tensors and Gradient Descent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/gridder.html">Gridding and diagnostic images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/optimization.html">Intro to RML with MPoL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/loose-visibilities.html">Likelihood functions and model visibilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/crossvalidation.html">Cross validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/gpu_setup.html">GPU Acceleration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/initializedirtyimage.html">Initializing with the Dirty Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large-tutorials/HD143006_part_1.html">HD143006 Tutorial Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large-tutorials/HD143006_part_2.html">HD143006 Tutorial Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci-tutorials/fakedata.html">Making a Mock Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large-tutorials/pyro.html">Parametric Inference with Pyro</a></li>
 </ul>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../changelog.html">
-   Changelog
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/MPoL-dev/MPoL" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-<a href="https://github.com/MPoL-dev/MPoL"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
 
 </a>
 
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                    </div>
-                </div>
-            </div>
-            <main id="main-content" role="main">
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <h1>Source code for mpol.training</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -299,6 +295,60 @@ title="Source repository"
 
 <span class="kn">from</span> <span class="nn">mpol.losses</span> <span class="kn">import</span> <span class="n">TSV</span><span class="p">,</span> <span class="n">TV_image</span><span class="p">,</span> <span class="n">entropy</span><span class="p">,</span> <span class="n">nll_gridded</span><span class="p">,</span> <span class="n">sparsity</span>
 <span class="kn">from</span> <span class="nn">mpol.plot</span> <span class="kn">import</span> <span class="n">train_diagnostics_fig</span>
+<span class="kn">from</span> <span class="nn">mpol.utils</span> <span class="kn">import</span> <span class="n">torch2npy</span>
+
+<div class="viewcode-block" id="train_to_dirty_image"><a class="viewcode-back" href="../../api.html#mpol.training.train_to_dirty_image">[docs]</a><span class="k">def</span> <span class="nf">train_to_dirty_image</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">imager</span><span class="p">,</span> <span class="n">robust</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">learn_rate</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">niter</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Train against a dirty image of the observed visibilities using a loss function </span>
+<span class="sd">    of the mean squared error between the RML model image pixel fluxes and the </span>
+<span class="sd">    dirty image pixel fluxes. Useful for initializing a separate RML optimization </span>
+<span class="sd">    loop at a reasonable starting image.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    model : `torch.nn.Module` object</span>
+<span class="sd">        A neural network module; instance of the `mpol.precomposed.SimpleNet` class.</span>
+<span class="sd">    imager : :class:`mpol.gridding.DirtyImager` object</span>
+<span class="sd">        Instance of the `mpol.gridding.DirtyImager` class.</span>
+<span class="sd">    robust : float, default=0.5</span>
+<span class="sd">        Robust weighting parameter used to create a dirty image. </span>
+<span class="sd">    learn_rate : float, default=100</span>
+<span class="sd">        Learning rate for optimization loop</span>
+<span class="sd">    niter : int, default=1000</span>
+<span class="sd">        Number of iterations for optimization loop</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    model : `torch.nn.Module` object</span>
+<span class="sd">        The input `model` updated with the state of the training to the </span>
+<span class="sd">        dirty image</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;    Initializing model to dirty image&quot;</span><span class="p">)</span>
+
+    <span class="n">img</span><span class="p">,</span> <span class="n">beam</span> <span class="o">=</span> <span class="n">imager</span><span class="o">.</span><span class="n">get_dirty_image</span><span class="p">(</span><span class="n">weighting</span><span class="o">=</span><span class="s2">&quot;briggs&quot;</span><span class="p">,</span>
+                                                <span class="n">robust</span><span class="o">=</span><span class="n">robust</span><span class="p">,</span>
+                                                <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;Jy/arcsec^2&quot;</span><span class="p">)</span>
+    <span class="n">dirty_image</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">learn_rate</span><span class="p">)</span>
+
+    <span class="n">losses</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">niter</span><span class="p">):</span>
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+
+        <span class="n">model</span><span class="p">()</span>
+
+        <span class="n">sky_cube</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">icube</span><span class="o">.</span><span class="n">sky_cube</span>
+
+        <span class="n">lossfunc</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">(</span><span class="n">reduction</span><span class="o">=</span><span class="s2">&quot;sum&quot;</span><span class="p">)</span>  
+        <span class="c1"># MSELoss calculates mean squared error (squared L2 norm), so sqrt it</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">lossfunc</span><span class="p">(</span><span class="n">sky_cube</span><span class="p">,</span> <span class="n">dirty_image</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span>
+        <span class="n">losses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+
+        <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>            
+
+    <span class="k">return</span> <span class="n">model</span></div>
+
 
 <div class="viewcode-block" id="TrainTest"><a class="viewcode-back" href="../../api.html#mpol.training.TrainTest">[docs]</a><span class="k">class</span> <span class="nc">TrainTest</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
@@ -307,9 +357,7 @@ title="Source repository"
 <span class="sd">    Args:</span>
 <span class="sd">        imager (:class:`mpol.gridding.DirtyImager` object): Instance of the `mpol.gridding.DirtyImager` class.</span>
 <span class="sd">        optimizer (:class:`torch.optim` object): PyTorch optimizer class for the training loop.</span>
-<span class="sd">        epochs (int): Number of training iterations, default=10000</span>
-<span class="sd">        convergence_tol (float): Tolerance for training iteration stopping criterion as assessed by</span>
-<span class="sd">            loss function (suggested &lt;= 1e-3)</span>
+<span class="sd">        scheduler (:class:`torch.optim.lr_scheduler` object, default=None): Scheduler for adjusting learning rate during optimization.        </span>
 <span class="sd">        regularizers (nested dict): Dictionary of image regularizers to use. For each, a dict of the strength (&#39;lambda&#39;, float), whether to guess an initial value for lambda (&#39;guess&#39;, bool), and other quantities needed to compute their loss term.</span>
 <span class="sd">            </span>
 <span class="sd">            Example:</span>
@@ -317,24 +365,30 @@ title="Source repository"
 <span class="sd">                &quot;entropy&quot;: {&quot;lambda&quot;:1e-3, &quot;guess&quot;:True, &quot;prior_intensity&quot;:1e-10}</span>
 <span class="sd">                }``</span>
 
+<span class="sd">        epochs (int): Number of training iterations, default=10000</span>
+<span class="sd">        convergence_tol (float): Tolerance for training iteration stopping criterion as assessed by</span>
+<span class="sd">            loss function (suggested &lt;= 1e-3)</span>
 <span class="sd">        train_diag_step (int): Interval at which training diagnostics are output. If None, no diagnostics will be generated.</span>
 <span class="sd">        kfold (int): The k-fold of the current training set (for diagnostics)        </span>
 <span class="sd">        save_prefix (str): Prefix (path) used for saved figure names. If None, figures won&#39;t be saved</span>
 <span class="sd">        verbose (bool): Whether to print notification messages</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">imager</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">convergence_tol</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> 
-                <span class="n">regularizers</span><span class="o">=</span><span class="p">{},</span> <span class="n">train_diag_step</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">kfold</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
-                <span class="n">save_prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span>
-                <span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">imager</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">scheduler</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">regularizers</span><span class="o">=</span><span class="p">{},</span>
+                <span class="n">epochs</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">convergence_tol</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span>                 
+                <span class="n">train_diag_step</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
+                <span class="n">kfold</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">save_prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span>
+                <span class="p">):</span> 
         <span class="bp">self</span><span class="o">.</span><span class="n">_imager</span> <span class="o">=</span> <span class="n">imager</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_optimizer</span> <span class="o">=</span> <span class="n">optimizer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_optimizer</span> <span class="o">=</span> <span class="n">optimizer</span>      
+        <span class="bp">self</span><span class="o">.</span><span class="n">_scheduler</span> <span class="o">=</span> <span class="n">scheduler</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_regularizers</span> <span class="o">=</span> <span class="n">regularizers</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_epochs</span> <span class="o">=</span> <span class="n">epochs</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_convergence_tol</span> <span class="o">=</span> <span class="n">convergence_tol</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_regularizers</span> <span class="o">=</span> <span class="n">regularizers</span>
+        
         <span class="bp">self</span><span class="o">.</span><span class="n">_train_diag_step</span> <span class="o">=</span> <span class="n">train_diag_step</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_save_prefix</span> <span class="o">=</span> <span class="n">save_prefix</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_kfold</span> <span class="o">=</span> <span class="n">kfold</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save_prefix</span> <span class="o">=</span> <span class="n">save_prefix</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_verbose</span> <span class="o">=</span> <span class="n">verbose</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_train_figure</span> <span class="o">=</span> <span class="kc">None</span>
@@ -373,7 +427,10 @@ title="Source repository"
 
 <span class="sd">        The guesses update `lambda` values in `self._regularizers`.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_verbose</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;    Updating regularizer strengths with automated &quot;</span>
+                         <span class="sa">f</span><span class="s2">&quot;guessing. Initial values: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_regularizers</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            
         <span class="c1"># generate images of the data using two briggs robust values</span>
         <span class="n">img1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_imager</span><span class="o">.</span><span class="n">get_dirty_image</span><span class="p">(</span><span class="n">weighting</span><span class="o">=</span><span class="s1">&#39;briggs&#39;</span><span class="p">,</span> <span class="n">robust</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
         <span class="n">img2</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_imager</span><span class="o">.</span><span class="n">get_dirty_image</span><span class="p">(</span><span class="n">weighting</span><span class="o">=</span><span class="s1">&#39;briggs&#39;</span><span class="p">,</span> <span class="n">robust</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
@@ -407,8 +464,11 @@ title="Source repository"
             <span class="n">loss_TSV1</span> <span class="o">=</span> <span class="n">TSV</span><span class="p">(</span><span class="n">img1</span><span class="p">)</span>
             <span class="n">loss_TSV2</span> <span class="o">=</span> <span class="n">TSV</span><span class="p">(</span><span class="n">img2</span><span class="p">)</span>
             <span class="n">guess_TSV</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">loss_TSV2</span> <span class="o">-</span> <span class="n">loss_TSV1</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_regularizers</span><span class="p">[</span><span class="s1">&#39;TSV&#39;</span><span class="p">][</span><span class="s1">&#39;lambda&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">guess_TSV</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_regularizers</span><span class="p">[</span><span class="s1">&#39;TSV&#39;</span><span class="p">][</span><span class="s1">&#39;lambda&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">guess_TSV</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
 
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_verbose</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    Updated values: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_regularizers</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+                         
 
 <div class="viewcode-block" id="TrainTest.loss_eval"><a class="viewcode-back" href="../../api.html#mpol.training.TrainTest.loss_eval">[docs]</a>    <span class="k">def</span> <span class="nf">loss_eval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vis</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">sky_cube</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
@@ -443,7 +503,7 @@ title="Source repository"
                 <span class="n">loss</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_regularizers</span><span class="p">[</span><span class="s1">&#39;TSV&#39;</span><span class="p">][</span><span class="s1">&#39;lambda&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">TSV</span><span class="p">(</span><span class="n">sky_cube</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">loss</span></div>
-
+        
 
 <div class="viewcode-block" id="TrainTest.train"><a class="viewcode-back" href="../../api.html#mpol.training.TrainTest.train">[docs]</a>    <span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
@@ -454,7 +514,7 @@ title="Source repository"
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        model : `torch.nn.Module` object</span>
-<span class="sd">            A neural network; instance of the `mpol.precomposed.SimpleNet` class.</span>
+<span class="sd">            A neural network module; instance of the `mpol.precomposed.SimpleNet` class.</span>
 <span class="sd">        dataset : PyTorch dataset object</span>
 <span class="sd">            Instance of the `mpol.datasets.GriddedDataset` class.</span>
 
@@ -465,31 +525,41 @@ title="Source repository"
 <span class="sd">        losses : list of float</span>
 <span class="sd">            Loss value at each iteration (epoch) in the loop</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+
         <span class="c1"># set model to training mode</span>
         <span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
 
         <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">fluxes</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">losses</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_train_state</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">learn_rates</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">old_mod_im</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">old_mod_epoch</span> <span class="o">=</span> <span class="kc">None</span>
 
-        <span class="c1"># guess initial strengths for regularizers in `self._regularizers`</span>
-        <span class="c1"># that have &#39;guess&#39;:True</span>
-        <span class="c1"># (this updates `self._regularizers`) </span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">loss_lambda_guess</span><span class="p">()</span>
+        <span class="n">run_loss_guess</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">_</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_regularizers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+                 <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+                     <span class="n">run_loss_guess</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">run_loss_guess</span><span class="p">:</span>
+            <span class="c1"># guess initial strengths for regularizers in `self._regularizers`</span>
+            <span class="c1"># that have &#39;guess&#39;:True</span>
+            <span class="c1"># (this updates `self._regularizers`) </span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">loss_lambda_guess</span><span class="p">()</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_verbose</span><span class="p">:</span>
             <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;    Image regularizers: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_regularizers</span><span class="p">))</span>
 
         <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss_convergence</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">losses</span><span class="p">))</span> <span class="ow">and</span> <span class="n">count</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_epochs</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_verbose</span><span class="p">:</span>
-                <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="nb">print</span><span class="p">(</span>
                     <span class="s2">&quot;</span><span class="se">\r</span><span class="s2">  Training: epoch </span><span class="si">{}</span><span class="s2"> of </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_epochs</span><span class="p">),</span>
                     <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
                     <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                 <span class="p">)</span>
 
             <span class="c1"># check early-on whether the loss isn&#39;t evolving</span>
-            <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">20</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
                 <span class="n">loss_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">losses</span><span class="p">)</span>
                 <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="mf">0.9</span> <span class="o">&lt;=</span> <span class="n">loss_arr</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">loss_arr</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span>
                     <span class="n">loss_arr</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">loss_arr</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">&lt;=</span> <span class="mf">1.1</span>
@@ -510,6 +580,10 @@ title="Source repository"
             <span class="c1"># get predicted sky cube corresponding to model visibilities</span>
             <span class="n">sky_cube</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">icube</span><span class="o">.</span><span class="n">sky_cube</span>
 
+            <span class="c1"># total flux in model image</span>
+            <span class="n">total_flux</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">cell_size</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">sky_cube</span><span class="p">)</span>
+            <span class="n">fluxes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">torch2npy</span><span class="p">(</span><span class="n">total_flux</span><span class="p">))</span>
+
             <span class="c1"># calculate loss between model visibilities and data</span>
             <span class="n">loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss_eval</span><span class="p">(</span><span class="n">vis</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">sky_cube</span><span class="p">)</span>
             <span class="n">losses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
@@ -520,19 +594,24 @@ title="Source repository"
             <span class="c1"># update model parameters via gradient descent</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
 
-            <span class="c1"># store current training parameter values</span>
-            <span class="c1"># TODO: store hyperpar values, access in crossval.py</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_train_state</span><span class="p">[</span><span class="s2">&quot;kfold&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kfold</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">_train_state</span><span class="p">[</span><span class="s2">&quot;epoch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_train_state</span><span class="p">[</span><span class="s2">&quot;learn_rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_optimizer</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()[</span><span class="s1">&#39;param_groups&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;lr&#39;</span><span class="p">]</span>            
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scheduler</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_scheduler</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+                <span class="n">learn_rates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_optimizer</span><span class="o">.</span><span class="n">param_groups</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;lr&#39;</span><span class="p">])</span>
 
             <span class="c1"># generate optional fit diagnostics</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_train_diag_step</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="p">(</span><span class="n">count</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_train_diag_step</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">count</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_epochs</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss_convergence</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">losses</span><span class="p">))):</span>
                 <span class="n">train_fig</span><span class="p">,</span> <span class="n">train_axes</span> <span class="o">=</span> <span class="n">train_diagnostics_fig</span><span class="p">(</span>
-                    <span class="n">model</span><span class="p">,</span> <span class="n">losses</span><span class="o">=</span><span class="n">losses</span><span class="p">,</span> <span class="n">train_state</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_train_state</span><span class="p">,</span> 
+                    <span class="n">model</span><span class="p">,</span> <span class="n">losses</span><span class="o">=</span><span class="n">losses</span><span class="p">,</span> <span class="n">learn_rates</span><span class="o">=</span><span class="n">learn_rates</span><span class="p">,</span> <span class="n">fluxes</span><span class="o">=</span><span class="n">fluxes</span><span class="p">,</span>
+                    <span class="n">old_model_image</span><span class="o">=</span><span class="n">old_mod_im</span><span class="p">,</span>
+                    <span class="n">old_model_epoch</span><span class="o">=</span><span class="n">old_mod_epoch</span><span class="p">,</span>
+                    <span class="n">kfold</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_kfold</span><span class="p">,</span> <span class="n">epoch</span><span class="o">=</span><span class="n">count</span><span class="p">,</span>
                     <span class="n">save_prefix</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_save_prefix</span>
                     <span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_train_figure</span> <span class="o">=</span> <span class="p">(</span><span class="n">train_fig</span><span class="p">,</span> <span class="n">train_axes</span><span class="p">)</span>
+
+                <span class="c1"># temporarily store the current model image for use in next call to `train_diagnostics_fig`</span>
+                <span class="n">old_mod_im</span> <span class="o">=</span> <span class="n">torch2npy</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">icube</span><span class="o">.</span><span class="n">sky_cube</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                <span class="n">old_mod_epoch</span> <span class="o">=</span> <span class="n">count</span> <span class="o">*</span> <span class="mi">1</span>
 
             <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
 
@@ -555,7 +634,7 @@ title="Source repository"
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        model : `torch.nn.Module` object</span>
-<span class="sd">            A neural network; instance of the `mpol.precomposed.SimpleNet` class.</span>
+<span class="sd">            A neural network module; instance of the `mpol.precomposed.SimpleNet` class.</span>
 <span class="sd">        dataset : PyTorch dataset object</span>
 <span class="sd">            Instance of the `mpol.datasets.GriddedDataset` class.</span>
 
@@ -576,6 +655,7 @@ title="Source repository"
         <span class="c1"># return loss value</span>
         <span class="k">return</span> <span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span></div>
 
+
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">regularizers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Dict containing regularizers used and their strengths&quot;&quot;&quot;</span>
@@ -584,44 +664,73 @@ title="Source repository"
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">train_figure</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;(fig, axes) of figure showing training diagnostics&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_train_figure</span>
-    
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">train_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Dict containing parameters of interest in the training loop&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_train_state</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_train_figure</span></div>
 </pre></div>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Ian Czekala<br/>
-  
-      &copy; Copyright 2019-22, Ian Czekala.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Ian Czekala
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2019-22, Ian Czekala.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
