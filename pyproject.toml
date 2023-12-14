@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "MPoL"
+version = "1.0.0"
+description = "Regularized Maximum Likelihood Imaging for Radio Astronomy"
+authors = ["Kadri Nizam <knizam@psu.edu>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+lightning = "^2.1.2"
+torch = [
+    { version = "^2.1.1", source = "torch_cu118",  platform = "!=darwin" },
+    { version = "^2.1.1", source = "PyPI", platform = "darwin" },
+]
+torchaudio = [
+  { version = "^2.1.1", source = "torch_cu118", platform = "!=darwin" },
+  { version = "^2.1.1", source = "PyPI", platform = "darwin" },
+]
+torchvision = [
+    { version = "^0.16.1", source = "torch_cu118", platform = "!=darwin"},
+    { version = "^0.16.1", source = "PyPI",  platform = "darwin"},
+]
+numpy = "^1.26.2"
+fast-histogram = "^0.12"
+matplotlib = "^3.8.2"
+ipykernel = "^6.27.1"
+astropy = "^6.0.0"
+
+[[tool.poetry.source]]
+name = "torch_cu118"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+mypy = "^1.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
