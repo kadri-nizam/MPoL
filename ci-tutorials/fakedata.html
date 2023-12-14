@@ -602,7 +602,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7ff6fcf50a90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fe080349af0&gt;
 </pre></div>
 </div>
 <img alt="../_images/be79b995a2a50bbef7c7e91994d8e1236259a969198edba72563cf87593c642d.png" src="../_images/be79b995a2a50bbef7c7e91994d8e1236259a969198edba72563cf87593c642d.png" />
@@ -617,7 +617,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7ff6f5479f40&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fe080046850&gt;
 </pre></div>
 </div>
 <img alt="../_images/a44fc2c19d14ce07c780c6b36d662170cba0b55b28bb6fd0f4cf9182abdda2e6.png" src="../_images/a44fc2c19d14ce07c780c6b36d662170cba0b55b28bb6fd0f4cf9182abdda2e6.png" />
@@ -789,15 +789,17 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/torchkbnufft/_nufft/spmat.py:101: UserWarning: torch.sparse.SparseTensor(indices, values, shape, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, shape, dtype=, device=). (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:605.)
-  torch.sparse.FloatTensor(inds, real_vals, torch.Size(shape)),  # type: ignore
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/mpol/fourier.py:348: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  uu_radpix_aug = torch.unsqueeze(torch.tensor(uu_radpix), 1)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/mpol/fourier.py:349: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  vv_radpix_aug = torch.unsqueeze(torch.tensor(vv_radpix), 1)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 325080)
 (1, 325080)
-[[ 0.47726623+1.65128352j  9.30584164+0.14043596j  1.2863074 +1.69758954j
-  ...  0.24576206-2.44619993j -1.1452844 -0.44065286j
-  -1.20843337-0.14673798j]]
+[[-1.62347348+0.34700153j  7.42643241+3.09702013j -1.33153402+1.92799041j
+  ... -0.14873846-1.84034935j -0.34633555-0.56561407j
+   0.07087844-0.06429691j]]
 </pre></div>
 </div>
 </div>
@@ -874,7 +876,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/47c1a2f071e24c8ce73b8909ba22e8dc958af92d1228375824dc3c19f5e0ccfb.png" src="../_images/47c1a2f071e24c8ce73b8909ba22e8dc958af92d1228375824dc3c19f5e0ccfb.png" />
+<img alt="../_images/a33415cb072fbf11cf0ec4e7d8d60478dd43e09972ff1d29c55cc8a653b84d44.png" src="../_images/a33415cb072fbf11cf0ec4e7d8d60478dd43e09972ff1d29c55cc8a653b84d44.png" />
 </div>
 </div>
 <p>We can even subtract this on a pixel-by-pixel basis and compare to the original image.</p>
@@ -905,7 +907,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/44fafd2f948184f6c24aa92cb787ad46eb96632d1794d6fe264d9832172cc3e3.png" src="../_images/44fafd2f948184f6c24aa92cb787ad46eb96632d1794d6fe264d9832172cc3e3.png" />
+<img alt="../_images/e6d52ce7efc38396006604f960aad2210e305542d0bc779dae96de33e3ab8d6d.png" src="../_images/e6d52ce7efc38396006604f960aad2210e305542d0bc779dae96de33e3ab8d6d.png" />
 </div>
 </div>
 <p>The subtraction revears some interesting artefacts.</p>
