@@ -41,5 +41,5 @@ class DataAverager:
     def __init__(self, grid: CartesianGrid):
         ...
 
-    def prepare_data(self, data: LooseVisibilities) -> GriddedVisibilities:
+    def process_data(self, data: LooseVisibilities) -> GriddedVisibilities:
         ...
