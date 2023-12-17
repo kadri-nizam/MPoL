@@ -22,12 +22,12 @@ C = SPEED_OF_LIGHT.value  # m / s
 # Common Protocols
 # ======================
 class TorchCallable(Protocol):
-    def __call__(self, input: torch.Tensor, *args, out=None, **kwargs) -> torch.Tensor:
+    def __call__(self, input: torch.Tensor, *args, **kwargs) -> torch.Tensor:
         ...
 
 
 class TorchForwardCompatible(Protocol):
-    def __call__(self, input: torch.Tensor, *args, out=None, **kwargs) -> torch.Tensor:
+    def __call__(self, input: torch.Tensor, *args, **kwargs) -> torch.Tensor:
         ...
 
     def forward(self, input: torch.Tensor) -> torch.Tensor:
