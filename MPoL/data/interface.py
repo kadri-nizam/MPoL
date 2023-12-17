@@ -1,7 +1,6 @@
-from typing import TYPE_CHECKING, Protocol
+from typing import Protocol
 
-if TYPE_CHECKING:
-    from .data import LooseVisibilities
+from .data import LooseVisibilities
 
 
 class DataPipeline(Protocol):
@@ -11,7 +10,7 @@ class DataPipeline(Protocol):
     and returns a LooseVisibilities object.
     """
 
-    def extract_data(self, file: str) -> LooseVisibilities:
+    def extract_data(self, path: str) -> LooseVisibilities:
         """Setup the data for ingesting into MPoL.
 
         Implement your custom logic for reading the data here ensuring that the

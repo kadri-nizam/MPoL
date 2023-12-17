@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Any, Generator
 
+import numpy as np
 import torch
 
 from MPoL.constants import ARCSEC
@@ -12,7 +13,7 @@ class LooseVisibilities:
     v: torch.Tensor
     visibilities: torch.Tensor
     weights: torch.Tensor | None = None
-    num_channels: int = field(init=False, default=1)
+    num_channels: int = field(init=False)
 
     @property
     def real(self):
@@ -27,6 +28,21 @@ class LooseVisibilities:
             self.weights = torch.ones_like(self.visibilities)
 
         self.num_channels = self.visibilities.size(0)
+
+    @classmethod
+    def from_numpy(
+        cls,
+        u: np.ndarray,
+        v: np.ndarray,
+        visibilities: np.ndarray,
+        weights: np.ndarray | None = None,
+    ) -> "LooseVisibilities":
+        return cls(
+            u=torch.from_numpy(u),
+            v=torch.from_numpy(v),
+            visibilities=torch.from_numpy(visibilities),
+            weights=torch.from_numpy(weights) if weights is not None else None,
+        )
 
     def __getitem__(self, index: int) -> "LooseVisibilities":
         assert self.weights is not None
