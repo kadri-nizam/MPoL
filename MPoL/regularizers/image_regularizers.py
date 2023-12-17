@@ -18,15 +18,9 @@ class TV(RegularizerModule):
 
     @staticmethod
     def functional(image: torch.Tensor) -> torch.Tensor:
-        row_diff = torch.diff(image[:, :-1], dim=0)
-        torch.pow(row_diff, 2, out=row_diff)
-
-        column_diff = torch.diff(image[:-1, :], dim=1)
-        torch.pow(column_diff, 2, out=column_diff)
-
-        # we'll avoid additional memory allocation by reusing row_diff
-        torch.add(row_diff, column_diff, out=row_diff)
-        return torch.sqrt(row_diff, out=row_diff).sum()
+        row_diff = torch.diff(image[:, :-1], dim=0).pow(2)
+        column_diff = torch.diff(image[:-1, :], dim=1).pow(2)
+        return torch.add(row_diff, column_diff).sqrt().sum()
 
 
 class TSV(RegularizerModule):
@@ -42,10 +36,6 @@ class TSV(RegularizerModule):
 
     @staticmethod
     def functional(image: torch.Tensor) -> torch.Tensor:
-        row_diff = torch.diff(image[:, :-1], dim=0)
-        torch.pow(row_diff, 2, out=row_diff)
-
-        column_diff = torch.diff(image[:-1, :], dim=1)
-        torch.pow(column_diff, 2, out=column_diff)
-
-        return torch.add(row_diff, column_diff, out=row_diff).sum()
+        row_diff = torch.diff(image[:, :-1], dim=0).pow(2)
+        column_diff = torch.diff(image[:-1, :], dim=1).pow(2)
+        return torch.add(row_diff, column_diff).sum()
