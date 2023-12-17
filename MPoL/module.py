@@ -7,8 +7,7 @@ import lightning
 import torch
 
 from MPoL.grid import CartesianGrid
-from MPoL.model import Image
-from MPoL.model.visibilities import Visibilities
+from MPoL.model import Image, Visibilities
 from MPoL.regularizers import ModelRegularizer
 
 if TYPE_CHECKING:
