@@ -17,7 +17,7 @@ class Visibilities(nn.Module):
         transforms: TorchForwardCompatible = nn.Identity(),
     ):
         super().__init__()
-        self.visibilities = starting_image
+        self.visibilities = transforms(fft_strategy(starting_image))
         self.fft_strategy = fft_strategy
         self.transforms = transforms
 
