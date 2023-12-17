@@ -14,6 +14,8 @@ from MPoL.regularizers import ModelRegularizer
 if TYPE_CHECKING:
     from lightning.pytorch.utilities.types import OptimizerLRScheduler
 
+    from MPoL.visibilities_matching.interface import ProcessedData
+
 
 class MPoLModule(ABC, lightning.LightningModule):
     def __init__(
@@ -52,13 +54,13 @@ class MPoLModule(ABC, lightning.LightningModule):
 
         return model_image, model_visibility
 
-    # TODO: figure out what batch's type is
-    def training_step(self, batch, batch_idx: int) -> torch.Tensor:
+    def training_step(self, batch: ProcessedData, batch_idx: int) -> torch.Tensor:
         model_image = self.image()
         model_visibility = self.visibility(model_image)
 
         # TODO: add other losses
         return torch.sum(
+            batch.compute_loss(model_visibility),
             self.image_regularizer(model_image),
             self.visibility_regularizer(model_visibility),
         )
