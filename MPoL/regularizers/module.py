@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from enum import StrEnum, auto
-from typing import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING, Protocol
 
 import torch
 import torch.nn as nn
@@ -9,7 +9,10 @@ import torch.nn as nn
 if TYPE_CHECKING:
     from .interface import RegularizerModule
 
-REDUCING_FUNCTION = Callable[[list[torch.Tensor]], torch.Tensor]
+
+class ReducingFunction(Protocol):
+    def __call__(self, input: list[torch.Tensor]) -> torch.Tensor:
+        ...
 
 
 class Reduction(StrEnum):
@@ -22,12 +25,11 @@ class Reduction(StrEnum):
     CUSTOM = auto()
 
 
-_REDUCTIION = {
-    Reduction.CONCAT: lambda x: torch.stack(x, dim=0),
-    Reduction.SUM: lambda x: torch.stack(x, dim=0).sum(),
-    Reduction.MEAN: lambda x: torch.stack(x, dim=0).mean(),
-    Reduction.PRODUCT: lambda x: torch.stack(x, dim=0).prod(),
-    Reduction.CUSTOM: lambda _: torch.Tensor([0.0]),
+_REDUCTIION: dict[Reduction, ReducingFunction] = {
+    Reduction.CONCAT: lambda input: torch.stack(input, dim=0),
+    Reduction.SUM: lambda input: torch.stack(input, dim=0).sum(),
+    Reduction.MEAN: lambda input: torch.stack(input, dim=0).mean(),
+    Reduction.PRODUCT: lambda input: torch.stack(input, dim=0).prod(),
 }
 
 
@@ -42,15 +44,14 @@ class ModelRegularizer(nn.Module):
             (nn.Identity(),)
         )
         self.reduction_type = reduction_type
-        self.reducer: REDUCING_FUNCTION = _REDUCTIION[reduction_type]
+        self.reducer: ReducingFunction = _REDUCTIION[reduction_type]
 
     @classmethod
     def with_custom_reduction(
-        cls, *regularizers: RegularizerModule, reducer: REDUCING_FUNCTION
+        cls, *regularizers: RegularizerModule, reducer: ReducingFunction
     ) -> ModelRegularizer:
-        instance = cls(*regularizers, reduction_type=Reduction.CUSTOM)
-        instance.reducer = reducer
-        return instance
+        _REDUCTIION.update({Reduction.CUSTOM: reducer})
+        return cls(*regularizers, reduction_type=Reduction.CUSTOM)
 
     def __repr__(self):
         modules = "\n".join(f"  ↳ {module}" for module in self.regularizers)
